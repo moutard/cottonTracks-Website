@@ -57,6 +57,15 @@ html{
 #leather{
 	background-image: url('images/leather.png');
 	height: 385px;
+	
+	#door{
+		position: relative;
+		top: -255px;
+		left: 2px;
+		z-index: 1;
+		width: 330px;
+		margin: auto;
+	}
 }
 
 #transition{
@@ -380,7 +389,16 @@ html{
       &.animate{
         .rotate-clockwise;
       }
-
+    }
+    
+   > .shadow {
+      z-index : 3;
+      margin-top:-25px;
+      margin-left:-30px;
+      
+      &.animate{
+        .rotate-clockwise;
+      }
     }
   }
 
@@ -413,8 +431,16 @@ html{
       &.animate{
         .rotate-counter-clockwise;
       }
+    }
 
-
+    > .shadow {
+      z-index : 3;
+      margin-top:-18px;
+      margin-left:-25px;
+      
+      &.animate{
+        .rotate-counter-clockwise;
+      }
     }
   }
 
@@ -445,8 +471,16 @@ html{
       &.animate{
         .rotate-counter-clockwise;
       }
+    }
 
-
+    > .shadow {
+      z-index : 3;
+      margin-top:-18px;
+      margin-left:-25px;
+      
+      &.animate{
+        .rotate-counter-clockwise;
+      }
     }
   }
 
@@ -476,9 +510,17 @@ html{
        &.animate{
         .rotate-counter-clockwise-acoup;
       }
-
-
     }
+    
+    > .shadow {
+      z-index : 3;
+      margin-top:-18px;
+      margin-left:-25px;
+
+       &.animate{
+        .rotate-counter-clockwise-acoup;
+      }
+    }    
   }
 
   }
