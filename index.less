@@ -1,6 +1,14 @@
 @font-face{
 	font-family: Edmondsans;
-	src: url('fonts/Edmondsans-Medium.otf');
+	src: url('fonts/Edmondsans_Medium.otf');
+}
+@font-face{
+	font-family: HelveticaNeue;
+	src: url('fonts/HelveticaNeue_Regular.ttf');
+}
+@font-face{
+	font-family: HelveticaNeueMedium;
+	src: url('fonts/HelveticaNeue_Medium.ttf');
 }
 @lensWidth: 301px;
 @lensHeight: 301px;
@@ -11,6 +19,7 @@ body{
 	height: 100%;
 	font-family:"helvetica neue", helvetica, arial;
 	-webkit-font-smoothing: antialiased;
+	font-family: HelveticaNeue;
 }
 
 html{
@@ -65,6 +74,16 @@ html{
 		z-index: 1;
 		width: 330px;
 		margin: auto;
+	}
+	
+	#tagline{
+		width: 300px;
+		font-size: 1.5em;
+		color: #f8f8f8;
+		font-family: HelveticaNeueMedium;
+		position: relative;
+		top: -455px;
+		left: 680px;
 	}
 }
 
