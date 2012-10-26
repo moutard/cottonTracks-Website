@@ -154,13 +154,27 @@ body{
 #screenshot{
 	padding-top: 160px;
 	clear: both;
+
+	#stripe{
+		height: 333px;
+		background-color: #2e2e2e;
+	}	
 	
 	.content_column{
 		background-image: url('images/milk_background.png');
 		background-repeat: no-repeat;
-		height: 334px;
+		height: 333px;
 		width: 1000px;
-
+		
+		#fadeleft{
+			width: 100px;
+			height: 333px;
+			background-image: url('images/milk_left.png');
+			background-repeat: no repeat;
+			position: relative;
+			left: -100px;
+		}
+		
 		#laptop{
 			width: 885px;
 			height: 481px;			
@@ -169,7 +183,14 @@ body{
 			position: relative;
 			left: 200px;
 			top: -65px;
-		}		
+		}
+		
+		#faderight{
+			width: 100px;
+			height: 333px;
+			background-image: url('images/milk_right.png');
+			background-repeat: no repeat;
+		}
 	}
 }
 
