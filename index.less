@@ -2,10 +2,7 @@
 	font-family: Edmondsans;
 	src: url('fonts/Edmondsans_Medium.otf');
 }
-@font-face{
-	font-family: HelveticaNeue;
-	src: url('fonts/HelveticaNeue_Regular.ttf');
-}
+
 @font-face{
 	font-family: HelveticaNeueMedium;
 	src: url('fonts/HelveticaNeue_Medium.ttf');
@@ -23,7 +20,7 @@ body{
 	background-color: #f8f8f8;
 	margin: 0;
 	height: 100%;
-	font-family: HelveticaNeue, helvetica, arial;
+	font-family: HelveticaNeueMedium, helvetica, arial;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -35,8 +32,9 @@ body{
 	z-index:1;
 	
 	#logo{
-		width: 396px;
+		width: 280px;
 		float: left;
+		margin-left: 116px;
 	}
 	
 	.page{
@@ -74,16 +72,24 @@ body{
 		z-index: 1;
 		width: 330px;
 		margin: auto;
+		transition: left 3s;
+		-moz-transition: left 3s;
+		-webkit-transition: left 3s;
+		-o-transition: left 3s;
 	}
 	
 	#tagline{
 		width: 300px;
 		font-size: 1.5em;
 		color: #f8f8f8;
-		font-family: HelveticaNeueMedium;
 		position: relative;
 		top: -460px;
 		left: 680px;
+		opacity: 0;
+		transition: opacity 3s;
+		-moz-transition: opacity 3s;
+		-webkit-transition: opacity 3s;
+		-o-transition: opacity 3s;
 	}
 }
 
@@ -139,14 +145,13 @@ body{
 		}
 		
 		h3{
-			font-family: HelveticaNeueMedium;
 			color:#333333;
 			font-weight: normal;
 			font-size: 1.1em;
 		}
 		
 		p{
-			color:#4c4c4c
+			color:#808080;
 		}
 	}
 }
@@ -156,19 +161,26 @@ body{
 	padding-bottom: 160px;
 	clear: both;
 	overflow: hidden;
-
-	#stripe{
+	
+	#stripe_bg{
 		height: 333px;
-		width: 1300px;
-		background-image: url('images/milk_background.png');
-		background-repeat: no-repeat;
-		background-color: #2e2e2e;
-		position: relative;
-		left: -150px;
+		width: 100%;
+		background-color: #252525;
+		position: absolute;
 	}	
+	
 	
 	.content_column{
 		height: 333px;
+
+		#stripe{
+			height: 333px;
+			width: 1300px;
+			background-image: url('images/milk_background.png');
+			background-repeat: no-repeat;
+			position: relative;
+			left: -150px;
+		}	
 		
 		#laptop{
 			width: 885px;
@@ -178,6 +190,12 @@ body{
 			position: relative;
 			left: 215px;
 			top: -400px;
+			
+			#kittens{
+				position: relative;
+				top: -435px;
+				left: 158px;
+			}
 		}
 	}
 }
@@ -187,7 +205,7 @@ body{
 	.paragraph{
 		margin-left: 360px;
 		margin-right: 40px;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 	
 	h3{
@@ -197,7 +215,7 @@ body{
 	
 	p{
 		color: #4c4c4c;
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 }
 
