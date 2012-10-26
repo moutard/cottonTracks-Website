@@ -1,3 +1,8 @@
+@font-face{
+	font-family: Edmondsans;
+	src: url('fonts/Edmondsans-Medium.otf');
+} 
+
 body{
 	background-color: #f8f8f8;
 	margin: 0;
@@ -15,15 +20,43 @@ html{
 #header{
 	height: 75px;
 	background-color: #e6e6e6;	
+	
+	#logo{
+		width: 396px;
+		float: left;
+	}
+	
+	.page{
+		float: left;
+		text-align: center;
+		width: 150px;
+		height: 75px;
+		font-family: Edmondsans;
+		font-size: 1.1em;
+		text-decoration: none;
+		color: #333333;
+	
+		p{
+			margin-top: 26px;
+			margin-bottom: 26px;
+		}
+	}
+	
+	.separation{
+		float: left;
+		width: 1px;
+		height: 75px;
+		background-color: #c4c4c4;
+	}
 }
-
+		
 #leather{
 	background-image: url('images/leather.png');
 	height: 425px;
 }
 
 #transition{
-	background-image: url('images/transition186px.png');
+	background-image: url('images/transition_background.png');
 	height: 52px;
 }
 
@@ -47,7 +80,7 @@ html{
 	background-color: #252525;
 }
 
-.content-column{
+.content_column{
 	width: 1000px;
 	margin: auto;
 }
