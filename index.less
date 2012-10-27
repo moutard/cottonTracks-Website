@@ -172,6 +172,7 @@ body{
 	
 	.content_column{
 		height: 333px;
+		position: relative;
 
 		#stripe{
 			height: 333px;
@@ -196,6 +197,42 @@ body{
 				top: -435px;
 				left: 158px;
 			}
+		}
+		
+		.dot{
+			background-color: #1f9f76;
+			border-radius: 25px;
+			width: 12px;
+			height: 12px;
+			border: solid 1px #c0c0c0;
+			position: absolute;
+		}
+		
+		.animation{
+			transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+			-moz-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+			-webkit-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+			-o-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+		}
+		
+		.milk{
+			top: 160px;
+			left: 200px;
+		}
+		
+		.tab{
+			top: 2px;
+			left: 470px;
+		}
+
+		.sticker{
+			top: 35px;
+			left: 800px;
+		}
+		
+		.element{
+			top: 120px;
+			left: 540px;
 		}
 	}
 }
