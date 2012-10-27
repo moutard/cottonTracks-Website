@@ -1,6 +1,8 @@
 $(document).on("ready",function(){
 	$(".dot").hover(function(){
-		hovered = true;
+		if (!$(this).hasClass("fade")){
+			hovered = true;
+		}
 	}, function(){
 		hovered = false;
 	}); 
