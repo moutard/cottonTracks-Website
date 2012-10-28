@@ -4,6 +4,10 @@
 }
 
 @font-face{
+	font-family: EdmondsansLight;
+	src: url('fonts/Edmondsans_Regular.otf');
+}
+@font-face{
 	font-family: HelveticaNeueMedium;
 	src: url('fonts/HelveticaNeue_Medium.ttf');
 }
@@ -206,6 +210,36 @@ body{
 			height: 12px;
 			border: solid 1px #c0c0c0;
 			position: absolute;
+			
+			.hint{
+				position: absolute;
+				background-color: #f8f8f8;
+				border: solid 1px #c0c0c0;
+				padding: 10px;
+				top: -80px;
+				left: -100px;
+				width: 200px;
+				font-size: 0.9em;
+				color: #4c4c4c;
+				opacity: 0;
+				transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+				-moz-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+				-webkit-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+				-o-transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+				
+				p{
+					margin: 0;
+				}
+				
+				h3{
+					margin-top: 23px;	
+				}
+				
+				#meow{
+					float: left;
+					margin-right: 30px;
+				}
+			}
 		}
 		
 		.animation{
@@ -218,21 +252,53 @@ body{
 		.milk{
 			top: 160px;
 			left: 200px;
+			
+			&:hover{
+				>.hint{
+					opacity: 1;
+					&:hover { opacity: 0 }
+				}
+			}
+			
+			.hint{
+				top:-100px;
+			}
 		}
 		
 		.tab{
 			top: 2px;
 			left: 470px;
+			
+			&:hover{
+				>.hint{
+					opacity: 1;
+					&:hover { opacity: 0 }
+				}
+			}
 		}
 
 		.sticker{
 			top: 35px;
 			left: 800px;
+			
+			&:hover{
+				>.hint{
+					opacity: 1;
+					&:hover { opacity: 0 }
+				}
+			}
 		}
 		
 		.element{
 			top: 120px;
 			left: 540px;
+			
+			&:hover{
+				>.hint{
+					opacity: 1;
+					&:hover { opacity: 0 }
+				}
+			}
 		}
 	}
 }
@@ -257,8 +323,101 @@ body{
 }
 
 #invite{
-	background-color: #9e9971;
-	height: 60px;
+		
+	.content_column{
+		position: relative;
+		width: 760px;
+		height: 230px;
+		background-image: url('images/letter_background.png');
+		text-align: center;
+		font-family: EdmondsansLight;
+		font-weight: normal;
+		
+		#letter_border{
+			width: 760px;
+			height: 10px;
+			background-image: url('images/letter_border.png');
+		}
+
+		
+		#stamp{
+			position: absolute;
+			width: 203px;
+			height: 119px;
+			top: 20px;
+			left: 10px;
+			background-image: url('images/beta_stamper.png');
+		}
+		
+		h2{
+			font-weight: normal;
+			font-size: 2.6em;
+			margin-top: 10px;
+			margin-bottom: 0px;
+		}
+		
+		p{
+			font-size: 1.1em;
+			margin-top: 0px
+		}
+		
+		#email_field{
+			width: 391px;
+			height: 52px;
+			background-image: url('images/email_field.png');
+			position: relative;
+			left: 80px;
+			
+			#email{
+				width: 391px;
+				height: 52px;
+				font-style: italic;
+				font-size: 1em;
+				color: #c4c4c4;
+				border: 0;
+				padding-left: 25px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: none;
+				
+				&:focus{
+					outline:none;
+				}
+			}
+		}
+		
+		#pastille{
+			width: 48px;
+			height: 44px;
+			background-image: url('images/google_icon.png');
+			position: absolute;
+			top: 162px;
+			left: 422px;
+		}
+
+		#validation{
+			width: 210px;
+			height: 45px;
+			background-color: #1c95c1;
+			border-radius: 25px;
+			margin: auto;
+			cursor: pointer;
+			box-shadow: 0 10px 5px -10px #f8f8f8 inset;
+			-webkit-box-shadow: 0 10px 5px -10px #f8f8f8 inset;
+			-moz-box-shadow: 0 10px 5px -10px #f8f8f8 inset;
+			-o-box-shadow: 0 10px 5px -10px #f8f8f8 inset;
+			position: absolute;
+			top: 162px;
+			left: 500px;
+			
+			p{
+				color: #f8f8f8;
+				font-family: Edmondsans;
+				margin-top: 12px;
+			}
+		}
+	}
 }
 
 #footer{
