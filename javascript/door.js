@@ -1,6 +1,7 @@
 $(document).on("ready",function(){
 	$("#request_button").click(function(){
-		window.scrollTop('1000px');
+		var toScroll = $(document).height()-$(window).height();
+		$("body").animate({scrollTop: toScroll}, 1000);
 	});
 
 	$(".dot").hover(function(){
