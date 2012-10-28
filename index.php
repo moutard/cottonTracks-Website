@@ -230,7 +230,7 @@ mysql_close($con);
 			Add your Google Account email to the waiting list,<br>
 			and we will send you an invitation for cottonTracks Beta.</p>
 			<div id="email_field">
-				<form method="post" action="index.php">
+				<form method="post" action="index.php#email_field">
 					<input id="email" type="text" name="email" value="Enter your Google Account email">
 					<input id="validation" type="submit" value="Invite my account" />
 				</form>
