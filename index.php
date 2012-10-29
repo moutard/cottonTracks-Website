@@ -204,7 +204,7 @@ if($email){
 			</div>
 			<div class="dot element">
 				<div class="hint">
-					Elements focus on
+					<p>Elements focus on
 					the best paragraph, image or video
 					you have seen within a page.</p>
 				</div>

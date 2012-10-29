@@ -4,15 +4,15 @@ $(document).on("ready",function(){
 		$("body").animate({scrollTop: toScroll}, 1000);
 	});
 
-	$(".dot").hover(function(){
-		if (!$(this).hasClass("fade")){
+	/**$(".dot").hover(function(){
+		if (!$(this).hasClass("fade") && !$(this).hasClass("hint") && !(this).is('p')){
 			hovered = true;
 		}
 	}, function(){
 		hovered = false;
 		$(".fade").removeClass("animation")
 		//dots(sCurrentDot);
-	});
+	});**/
 	
 	$('#email').focus(function(){
 		if ($('#email').val() === 'Enter your Google Account email'){
@@ -22,7 +22,7 @@ $(document).on("ready",function(){
 		
 });
 
-var hovered = false;
+//var hovered = false;
 var sCurrentDot = "milk";
 
 
