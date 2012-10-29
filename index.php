@@ -32,6 +32,13 @@ if($email){
   		die('Error: ' . mysql_error());
     } else {
       $form_message = 'An invitation will be sent in few minutes.';
+      // send an email to contact to add it manually.
+      $to = "contact@cottontracks.com";
+      $subject = "[URGENT] Invitation private beta";
+      $message = "A new client ask for an inviation. His email is ".$email." ";
+      $from = "social@cottontracks.com";
+      $headers = "From:" . $from;
+      mail($to,$subject,$message,$headers);
     }
   } else {
      $form_message = 'This is not a valid adress email';
