@@ -33,7 +33,7 @@ function dynamic() {
 }
 
 function dots(sDot) {
-	if (!hovered){
+	//if (!hovered){
 			$("."+sDot+"_fade").addClass("animation");
 			$("."+sDot+"_fade").css({"width":"48px","height":"48px","left":"-=18","top":"-=18","opacity":"0"})
 		setTimeout(function(){
@@ -60,7 +60,7 @@ function dots(sDot) {
 				break;			
 			}
 		},1000);
-	}
+//	}
 }
 
 window.onload = dynamic;
