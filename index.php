@@ -98,12 +98,7 @@ if($email){
 	</div>
 	<div id="leather">
 		<div class="content_column">
-      <div id="door">
-				<img class="ct-lens_door" src='images/lens_door.png'>
-			</div>
-
-      <div class="ct-lens">
-		        <img class="cache" src="images/gears_cache.png">
+     		<div class="ct-lens">
 		        <div class='shadow'></div>
 		        <div class='glass'></div>
 		        <div class="gear gear1">
@@ -131,6 +126,10 @@ if($email){
 		          <img class="perspective animate" src="images/gear4_perspective.png" >
 				  <img class="shadow animate" src="images/gear4_shadow.png" >
 		        </div>
+			</div>
+	        <img class="cache" src="images/gears_cache.png">
+      		<div id="door">
+				<img class="ct-lens_door" src='images/lens_door.png'>
 			</div>
 			<div id="tagline">Turn Google Chrome into a powerful memory engine.</div>
 		</div>

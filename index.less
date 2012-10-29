@@ -69,10 +69,17 @@ body{
 	background-image: url('images/leather.png');
 	height: 385px;
 
+
+	.cache {
+	  position: relative;
+	  top: -302px;
+	  left: 210px;
+	}
+
 	#door{
 		position: relative;
-		top: 38px;
-		left: 2px;
+		top: -680px;
+		left: -1px;
 		z-index: 1;
 		width: 330px;
 		margin: auto;
@@ -87,7 +94,7 @@ body{
 		font-size: 1.5em;
 		color: #f8f8f8;
 		position: relative;
-		top: -460px;
+		top: -900px;
 		left: 680px;
 		opacity: 0;
 		transition: opacity 3s;
@@ -477,13 +484,14 @@ body{
 
 .ct-lens {
   position: relative;
-  top: -278px;
+  top: 58px;
   margin: auto;
   width: @lensWidth;
   height: @lensHeight;
   background-image: url('images/gears_background.png');
   background-size: 100% 100%;
   z-index : 0;
+  opacity: 0;
 
   > .shadow {
     width: @lensWidth;
@@ -895,11 +903,5 @@ body{
   }
 
   }
-
-  > .cache {
-    position: absolute;
-    top: -59px;
-    left: -137px;
-    z-index: 5;
-  }
 }
+

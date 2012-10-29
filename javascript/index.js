@@ -1,23 +1,8 @@
 $(document).on("ready",function(){
-	var $lens = $(".ct-lens").hide();
-  $(".ct-lens_door").load(function(){
-    $lens.show();
-    $("#door").css('left','-270px');
-  });
-  $("#request_button").click(function(){
+  	$("#request_button").click(function(){
 		var toScroll = $(document).height()-$(window).height();
 		$("body").animate({scrollTop: toScroll}, 1000);
 	});
-
-	/**$(".dot").hover(function(){
-		if (!$(this).hasClass("fade") && !$(this).hasClass("hint") && !(this).is('p')){
-			hovered = true;
-		}
-	}, function(){
-		hovered = false;
-		$(".fade").removeClass("animation")
-		//dots(sCurrentDot);
-	});**/
 
 	$('#email').focus(function(){
 		if ($('#email').val() === 'Enter your Google Account email'){
@@ -27,36 +12,28 @@ $(document).on("ready",function(){
 
 });
 
-//var hovered = false;
-var sCurrentDot = "milk";
-
-
 function dynamic() {
-	//$('#door').css('left','-270px');
+    $(".ct-lens").css('opacity','1');
+	$('#door').css('left','-270px');
 	$('#tagline').css('opacity','1');
-	dots(sCurrentDot);
+	dots("milk");
 }
 
 function dots(sDot) {
-	//if (!hovered){
 			$("."+sDot+"_fade").addClass("animation");
 			$("."+sDot+"_fade").css({"width":"48px","height":"48px","left":"-=18","top":"-=18","opacity":"0"})
 		setTimeout(function(){
 			switch (sDot){
 			case "milk":
-				sCurrentDot = "tab";
 				dots("tab");
 				break;
 			case "tab":
-				sCurrentDot = "element";
 				dots("element");
 				break;
 			case "element":
-				sCurrentDot = "sticker";
 				dots("sticker");
 				break;
 			case "sticker":
-				sCurrentDot = "milk";
 				$(".fade").removeClass("animation")
 				$(".fade").css({"width":"12px","height":"12px","left":"+=18","top":"+=18","opacity":"1"});
 				setTimeout(function(){
@@ -65,7 +42,6 @@ function dots(sDot) {
 				break;
 			}
 		},1000);
-//	}
 }
 
 window.onload = dynamic;
