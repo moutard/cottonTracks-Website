@@ -2,33 +2,43 @@
 //$username = "cottontracks";
 //$password = "ctdb55qC";
 //$hostname = "mysql51-38.perso";
-$username = "root";
-$password = "ltu";
-$hostname = "127.0.0.1";
 
-$con = mysql_connect($hostname, $username, $password);
-if (!$con) {
-  die('Could not connect: ' . mysql_error());
-}
-
-// some code
+// Variable post by the invite beta form.
 $email = $_POST['email'];
 if($email){
+
+  // Open a connection only if needed.
+  $username = "root";
+  $password = "root";
+  $hostname = "127.0.0.1";
+
+  $con = mysql_connect($hostname, $username, $password);
+  if (!$con) {
+    die('Could not connect: ' . mysql_error());
+  }
+
+
   if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-  	//L'email est bonne
+    // email is valid
+    // TODO(rmoutard) : check that email is unique.
   	mysql_select_db("cottontracks", $con);
 
   	$sql="INSERT INTO clients (email)
 		VALUES
 		('$email')";
 
-		if (!mysql_query($sql,$con)) {
+    if (!mysql_query($sql,$con)) {
+      $form_message = 'Something went wrong during the request. Sorry try later.';
   		die('Error: ' . mysql_error());
-  	}
+    } else {
+      $form_message = 'An invitation will be sent in few minutes.';
+    }
+  } else {
+     $form_message = 'This is not a valid adress email';
   }
+  mysql_close($con);
 }
 
-mysql_close($con);
 
 ?>
 
@@ -231,8 +241,20 @@ mysql_close($con);
 			and we will send you an invitation for cottonTracks Beta.</p>
 			<div id="email_field">
 				<form method="post" action="index.php#email_field">
-					<input id="email" type="text" name="email" value="Enter your Google Account email">
-					<input id="validation" type="submit" value="Invite my account" />
+					<?php
+            // If the email was sent put it on the field.
+            if($email){
+              echo '<input id="email" type="text" name="email" value="'.$email.'">';
+            } else {
+              echo '<input id="email" type="text" name="email" value="Enter your Google Account email">';
+            }
+          ?>
+          <input id="validation" type="submit" value="Invite my account"/>
+          <?php
+            if($form_message){
+              echo '<p class="form_message">'.$form_message.'</p>';
+            }
+          ?>
 				</form>
 			</div>
 			<div id='pastille'></div>
