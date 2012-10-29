@@ -3,10 +3,10 @@
 //$password = "ctdb55qC";
 //$hostname = "mysql51-38.perso";
 $username = "root";
-$password = "";
-$hostname = "127.0.0.1:8889"; 
+$password = "ltu";
+$hostname = "127.0.0.1";
 
-$con = mysql_connect("127.0.0.1:8889", "root", "root");
+$con = mysql_connect($hostname, $username, $password);
 if (!$con) {
   die('Could not connect: ' . mysql_error());
 }
@@ -14,7 +14,7 @@ if (!$con) {
 // some code
 $email = $_POST['email'];
 if($email){
-  if(filter_var($email, FILTER_VALIDATE_EMAIL)){ 
+  if(filter_var($email, FILTER_VALIDATE_EMAIL)){
   	//L'email est bonne
   	mysql_select_db("cottontracks", $con);
 
@@ -34,7 +34,7 @@ mysql_close($con);
 
 <!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" itemscope itemtype="http://schema.org/Product">
-  
+
 <head>
 	<title>cottonTracks</title>
     <meta http-equiv="Content-Type" content = "text/html; charset=utf-8"/>
@@ -91,20 +91,20 @@ mysql_close($con);
 				  <img class="shadow animate" src="images/gear1_shadow.png" >
 		          <img class="middlescrew" src="images/lens_gears1_middlescrew.png">
 		        </div>
-		
+
 		        <div class="gear gear2">
 		          <img class="shine animate" src="images/gear2.png" >
 		          <img class="perspective animate" src="images/gear2_perspective.png" >
 				  <img class="shadow animate" src="images/gear2_shadow.png" >
 		          <img class="middlescrew" src="images/lens_gears1_middlescrew.png">
 		        </div>
-		
+
 		        <div class="gear gear3">
 		          <img class="shine animate" src="images/gear3.png" >
 		          <img class="perspective animate" src="images/gear3_perspective.png" >
 				  <img class="shadow animate" src="images/gear3_shadow.png" >
 		        </div>
-		
+
 		        <div class="gear gear4">
 		          <img class="shine animate" src="images/gear4.png" >
 		          <img class="perspective animate" src="images/gear4_perspective.png" >
@@ -150,8 +150,8 @@ mysql_close($con);
 					of your grandma’s dog are not required<br/>
 					to use the service. Just install it<br/>
 					and enjoy!</p>
-				</div>		
-			</div>	
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="screenshot">
@@ -200,7 +200,7 @@ mysql_close($con);
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 	<div id="vision">
 		<div class="content_column">
 			<div class="paragraph">
@@ -208,7 +208,7 @@ mysql_close($con);
 			<p>When you browse the web, from time to time, a magical discovery happens.
 			You start reading about a subject and you end up, an hour later wondering
 			how you got to that Wikipedia article about the Roman Empire.
-			cottonTracks has been designed to remember those moments and give you insight 
+			cottonTracks has been designed to remember those moments and give you insight
 			and access into how you discovered it.
 			</div>
 			<div class="paragraph">
@@ -237,7 +237,7 @@ mysql_close($con);
 			</div>
 			<div id='pastille'></div>
 		</div>
-	</div>	
+	</div>
 	<div id="footer">
 		<div class="content_column">
 			<div id="sitemap">
@@ -258,6 +258,6 @@ mysql_close($con);
   })();</script>
 			</div>
 		</div>
-	</div>	
+	</div>
 </body>
 </html>
