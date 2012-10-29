@@ -99,7 +99,7 @@ if($email){
 	<div id="leather">
 		<div class="content_column">
       <div id="door">
-				<img src='images/lens_door.png'>
+				<img class="ct-lens_door" src='images/lens_door.png'>
 			</div>
 
       <div class="ct-lens">

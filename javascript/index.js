@@ -1,5 +1,10 @@
 $(document).on("ready",function(){
-	$("#request_button").click(function(){
+	var $lens = $(".ct-lens").hide();
+  $(".ct-lens_door").load(function(){
+    $lens.show();
+    $("#door").css('left','-270px');
+  });
+  $("#request_button").click(function(){
 		var toScroll = $(document).height()-$(window).height();
 		$("body").animate({scrollTop: toScroll}, 1000);
 	});
@@ -13,13 +18,13 @@ $(document).on("ready",function(){
 		$(".fade").removeClass("animation")
 		//dots(sCurrentDot);
 	});**/
-	
+
 	$('#email').focus(function(){
 		if ($('#email').val() === 'Enter your Google Account email'){
 			$('#email').val('');
 		}
 	});
-		
+
 });
 
 //var hovered = false;
@@ -27,7 +32,7 @@ var sCurrentDot = "milk";
 
 
 function dynamic() {
-	$('#door').css('left','-270px');
+	//$('#door').css('left','-270px');
 	$('#tagline').css('opacity','1');
 	dots(sCurrentDot);
 }
@@ -54,10 +59,10 @@ function dots(sDot) {
 				sCurrentDot = "milk";
 				$(".fade").removeClass("animation")
 				$(".fade").css({"width":"12px","height":"12px","left":"+=18","top":"+=18","opacity":"1"});
-				setTimeout(function(){	
+				setTimeout(function(){
 					dots("milk");
 				},2000);
-				break;			
+				break;
 			}
 		},1000);
 //	}
