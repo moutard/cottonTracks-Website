@@ -31,7 +31,7 @@ if($email){
       $form_message = 'Something went wrong during the request. Sorry try later.';
   		die('Error: ' . mysql_error());
     } else {
-      $form_message = 'An invitation will be sent in few minutes.';
+      $form_message = "Thanks for subscribing for and invite, we'll let you know as soon as your access has been created";
       // send an email to contact to add it manually.
       $to = "contact@cottontracks.com";
       $subject = "[URGENT] Invitation private beta";
