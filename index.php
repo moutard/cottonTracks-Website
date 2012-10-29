@@ -132,7 +132,7 @@ if($email){
 				  <img class="shadow animate" src="images/gear4_shadow.png" >
 		        </div>
 			</div>
-			<div id="tagline">Turn your Google Chrome into a powerful personal web memory engine.</div>
+			<div id="tagline">Turn Google Chrome into a powerful memory engine.</div>
 		</div>
 	</div>
 	<div id="transition">
