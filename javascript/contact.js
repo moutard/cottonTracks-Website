@@ -1,0 +1,98 @@
+$(document).on("ready",function(){
+   	$('#stopwheel').click(function() {
+		stop=1;
+	$('#stopwheel').css('opacity','0');
+	$('p').css('opacity','0');
+	$('#contactMedium').css('opacity','1');
+	});	
+});	
+	
+	var lContactMedium = [];
+	lContactMedium[0] = "images/pigeon.png";
+	lContactMedium[1] = "images/cans.png";
+	lContactMedium[2] = "images/smoke_signals.png";
+	lContactMedium[3] = "images/morse.png";
+	lContactMedium[4] = "images/bottle.png";
+
+	var i = 0;
+	var stop = 0;
+	var n = 100;
+	var roll=0;
+	var color='grey';
+	var blinkcount=0;
+	var sContectMediumGreen='';
+	
+	cycle();
+
+
+
+
+	function cycle() {
+		if ( roll < 30){
+		  roll= roll+stop;
+	      i = (i + 1) %5;
+    	  $('#contactMedium').attr('src',lContactMedium[i]);
+    	  setTimeout("cycle()",100);
+		}
+	 else{
+	 	slowdown();
+	 }
+   }
+   
+
+	function slowdown() {
+		if (n<=1000){
+			n=n*1.5;
+			i = (i + 1)%5;
+	    	$('#contactMedium').attr('src',lContactMedium[i]);
+	    	setTimeout("slowdown()",n);
+		}
+		else{
+			selectMedium();
+		}
+	}
+	
+	
+	function selectMedium() {
+			i = (i + 1)%5;
+	    	$('#contactMedium').attr('src',lContactMedium[i]);
+	    	sContactMediumGreen = lContactMedium[i].replace(".","_green.");
+			setTimeout("blink()",200);
+			switch (i){
+				case 0:
+				var result = "pigeon";
+				break;
+				case 1:
+				var result = "cans";
+				break;
+				case 2:
+				var result = "smoke_signals";
+				break;
+				case 3:
+				var result = "morse";
+				break;
+				case 4:
+				var result = "bottle";
+				break;
+			}
+			$("."+result).css('display','block');
+			setTimeout(function(){$("."+result).css('opacity','1');}, 1000 );
+			$("#attribution"+result).css('display','block');
+			setTimeout(function(){$("#attribution"+result).css('opacity','1');}, 1000 );
+	}
+	
+	function blink() {
+		if(blinkcount < 5){
+			blinkcount = blinkcount+1;
+			if(color == 'grey'){
+		    	$('#contactMedium').attr('src',sContactMediumGreen);
+				color = 'green';
+				setTimeout("blink()",200);
+			}else {
+				$('#contactMedium').attr('src',lContactMedium[i]);
+				color = 'grey';
+				setTimeout("blink()",200);
+			}
+		}else {$('#contactMedium').css('margin-left','40px');}
+	}
+		

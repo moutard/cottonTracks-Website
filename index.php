@@ -55,7 +55,6 @@ if($email){
 <head>
 	<title>cottonTracks</title>
     <meta http-equiv="Content-Type" content = "text/html; charset=utf-8"/>
-    <!--<link rel="stylesheet" media ="screen" type="text/css" title="design" href="index.css"/>-->
     <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.cottontracks.com/images/cTfav16BW.png">
 	<script type="text/javascript" src="javascript/ga.js"></script>
 	<script type="text/javascript" src="javascript/konami.js"></script>
@@ -90,7 +89,7 @@ if($email){
 			<div class="separation"></div>
 			<a href="team.html"><div class="page"><p>Meet the Team</p></div></a>
 			<div class="separation"></div>
-			<a href="blog.html"><div class="page"><p>Read our Blog</p></div></a>
+			<a href="http://cottontracks.tumblr.com"><div class="page"><p>Read our Blog</p></div></a>
 			<div class="separation"></div>
 			<a href="contact.html"><div class="page"><p>Drop us a Line</p></div></a>
 			<div class="separation"></div>
@@ -272,12 +271,12 @@ if($email){
 		<div class="content_column">
 			<div id="sitemap">
 				<a href="team.html">Meet the Team</a>
-				<a href="blog.html">Read our Blog</a>
+				<a href="http://cottontracks.tumblr.com">Read our Blog</a>
 				<a href="contact.html">Drop us a Line</a>
 			</div>
 			<div id="social">
 				<div class="fb-like" data-href="http://facebook.com/cottontracks" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-text="I just discovered @cottonTracks, great way to remember the best of what you browse. Check it out!">Tweet</a>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.cottontracks.com" data-text="Your browser history becomes cool again! @cottonTracks is a great way to remember the best of what you browse.">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				<div class="g-plusone" data-size="medium" data-href="http://www.cottontracks.com" data-expandTo="top"></div>
 				<script type="text/javascript">
