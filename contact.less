@@ -29,6 +29,7 @@ html{
 .content_column{
 	width: 1000px;
 	margin: auto;
+	position: relative;
 }
 
 #header{
@@ -77,6 +78,21 @@ html{
 		-webkit-transition: opacity 2s, margin 2s; /* Safari and Chrome */
 		-o-transition: opacity 2s, margin 2s; /* Opera */
 		opacity:0;
+	}
+	
+	#descriptif{
+		width: 240px;
+		text-align: center;
+		font-size: 1.2em;
+		position: relative;
+		top: -20px;
+		left: 396px;
+		transition: opacity 2s, left 2s;
+		-moz-transition: opacity 2s, left 2s; /* Firefox 4 */
+		-webkit-transition: opacity 2s, left 2s; /* Safari and Chrome */
+		-o-transition: opacity 2s, left 2s; /* Opera */
+		opacity:0;
+		font-weight: bold;
 	}
 	
 	#stopwheel{
@@ -131,8 +147,8 @@ html{
 	
 	.contact_us{
 		position: absolute;
-		top: 0px;
-		right: 60px;
+		top: 90px;
+		right: 100px;
 		width: 400px;
 	}
 	

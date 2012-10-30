@@ -2,7 +2,7 @@ $(document).on("ready",function(){
    	$('#stopwheel').click(function() {
 		stop=1;
 	$('#stopwheel').css('opacity','0');
-	$('p').css('opacity','0');
+	$('#main p').css('opacity','0');
 	$('#contactMedium').css('opacity','1');
 	});
 	
@@ -32,7 +32,7 @@ cycle();
 
 
 function cycle() {
-	if ( roll < 30){
+	if ( roll < 15){
 	  roll= roll+stop;
       i = (i + 1) %5;
    	  $('#contactMedium').attr('src',lContactMedium[i]);
@@ -97,7 +97,26 @@ function blink() {
 			color = 'grey';
 			setTimeout("blink()",200);
 		}
-	}else {$('#contactMedium').css('margin-left','40px');}
+	}else {
+		switch (i){
+			case 0:
+			$('#descriptif').html('HOMING PIGEON');
+			break;
+			case 1:
+			$('#descriptif').html('TIN CAN PHONE');
+			break;
+			case 2:
+			$('#descriptif').html('SMOKE SIGNALS');
+			break;
+			case 3:
+			$('#descriptif').html('MORSE CODE');
+			break;
+			case 4:
+			$('#descriptif').html('MESSAGE IN A BOTTLE');
+			break;
+		}
+		$('#descriptif').css({'opacity':'1', 'left': '130px'});
+		$('#contactMedium').css('margin-left','-260px');}
 }
 
 var lancement = 0;
