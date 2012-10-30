@@ -131,7 +131,8 @@ if($email){
       		<div id="door">
 				<img class="ct-lens_door" src='images/lens_door.png'>
 			</div>
-			<div id="tagline">Turn Google Chrome into a powerful memory engine.</div>
+			<div id="tagline">Turn Google Chrome into a powerful memory engine.<br>
+			Love your history again.</div>
 		</div>
 	</div>
 	<div id="transition">
