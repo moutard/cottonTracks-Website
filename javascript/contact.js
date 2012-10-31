@@ -3,6 +3,10 @@ var Cotton = {};
 
 Cotton.Contact = {};
 
+Number.prototype.mod = function(n) {
+  return ((this%n)+n)%n;
+  };
+
 var lContactMedium = [
 { 'name': 'pigeon',
   'message' : "Send us this homing pigeon, he'll find his way. But don't forget to give him a treat, and wax-seal your envelope!",
@@ -60,15 +64,17 @@ Cotton.Contact.Medium = Class.extend({
     self._sImageLabel = sImageLabel;
 
     self._$medium = $('<div class="medium"></div>');
-    self._$image = $('<img id="contactMedium" src="' + sImage + '" style="opacity: 1; ">');
-    self._$image_label = $('<div id="image_label">' + sImageLabel + '</div>');
-    self._$description = $('<div id="description">'+ sMessage + '<br/>' +
-        'or alternatively you can send us an email.' +
-        '<img class="mail" src="images/email.png">' +
-        '<a class="email" href="mailto:contact@cottontracks.com">contact@cottontracks.com</a>' +
-        '</div>');
+    self._$image_block = $('<div class="image_block"></div>');
+    self._$image = $('<img src="' + sImage + '" style="opacity: 1; ">');
+    self._$image_label = $('<div class="image_label">' + sImageLabel + '</div>').hide();
+    self._$description = $('<div class="description"><p>'+ sMessage + '<br/>' +
+        'or alternatively you can send us an email.' + '</p>' +
+        '<div class="mail"><img src="images/email.png">' +
+        '<a href="mailto:contact@cottontracks.com">contact@cottontracks.com</a>' +
+        '</div><div class="joke">' + self._sJoke + '</div></div>').hide();
 
-    self._$medium.append(self._$image, self._$image_label, self._$description);
+    self._$medium.append(self._$image_block.append(self._$image, self._$image_label),
+        self._$description);
   },
 
   $ : function() {
@@ -85,23 +91,33 @@ Cotton.Contact.Medium = Class.extend({
     self._$image.attr('src', self._sImage);
   },
 
-  blink : function(iBlinckCount) {
+  blink : function(iBlinckCount, mCallBackFuntion) {
     var self = this;
     if(iBlinckCount < 5){
       iBlinckCount += 1;
 
       if(iBlinckCount % 2){
         self.toGreen();
-        setTimeout(function(){
-          self.blink(iBlinckCount);
-        },200);
       } else {
         self.toGrey();
-        setTimeout(function(){
-          self.blink(iBlinckCount);
-        },200);
       }
+
+      setTimeout(function(){
+        self.blink(iBlinckCount, mCallBackFuntion);
+      },200);
+
+    } else {
+      mCallBackFuntion();
     }
+  },
+
+  select : function() {
+    var self = this;
+    self.blink(0, function(){
+      self._$image.css('margin-left','-260px');
+      self._$image_label.show().css('margin-left','-260px');
+      self._$description.show().css('opacity', '1');
+    });
   },
 });
 
@@ -115,9 +131,7 @@ Cotton.Contact.Page = Class.extend({
 
   init : function() {
     var self = this;
-    self._$contact_button = $('<div class="contact_button"> CONTACT US </div>').click(function(){
-      self.random();
-    });
+
     self._$try_again_button = $('<div class="try_again_button"></div>');
 
     self._lMediums = [];
@@ -127,21 +141,65 @@ Cotton.Contact.Page = Class.extend({
           dMedium['message'], dMedium['joke'], dMedium['image'], dMedium['imageLabel']));
     }
 
-    self._$page = $('#main .content_column');
-    self._$page.append(self._$contact_button);
   },
 
   $ : function() {
     return this._$page;
   },
 
-  random : function() {
+  display : function() {
+    var self = this;
+    self._$contact_button = $(".contact_button").click(function(){
+      self.animate();
+    });
+
+    if (($('#header').height() + $('#main').height() + $('#footer').height()) <= $(window).height()) {
+      $('#footer').css({'position': 'fixed'});
+    } else {
+      $('#footer').css({'position': 'static'});
+    }
+
+    $('#footer').css({'opacity': '1'});
+
+    self._$page = $('#main .content_column');
+  },
+
+  animate : function() {
+    var self = this;
+    var iSelectedMedium = Math.floor((Math.random()*15)+10);;
     self._$contact_button.hide();
+    self._$page.find('p').remove();
+    _.each(self._lMediums, function(oMedium){
+      oMedium.$().hide();
+      self._$page.append(oMedium.$());
+    })
+
+    self.clignote(0, iSelectedMedium);
+  },
+
+  clignote : function(i, iSelectedMedium) {
+    var self = this;
+    var iPrevious = (i-1).mod(lContactMedium.length);
+
+    if(i < iSelectedMedium){
+      var iCurrent = (i).mod(lContactMedium.length);
+
+      self._lMediums[iPrevious].$().hide();
+      self._lMediums[iCurrent].$().show();
+
+      setTimeout(function(){
+        self.clignote(i+1, iSelectedMedium);
+      }, 200);
+    } else {
+      self._lMediums[iPrevious].select();
+    }
+
   },
 });
 
+var oPage = new Cotton.Contact.Page();
 $(window).load(function(){
-  var oPage = new Cotton.Contact.Page();
+  oPage.display();
 });
 
 /*
