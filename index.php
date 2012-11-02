@@ -264,8 +264,8 @@ if($email){
 	            }
 	          ?>
 					</form>
+					<div id='pastille'></div>
 				</div>
-				<div id='pastille'></div>
 			</div>
 		</div>
 	</div>
