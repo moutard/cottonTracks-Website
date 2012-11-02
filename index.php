@@ -1,16 +1,16 @@
 <?php
-//$username = "cottontracks";
-//$password = "ctdb55qC";
-//$hostname = "mysql51-38.perso";
+$username = "cottontracks";
+$password = "ctdb55qC";
+$hostname = "mysql51-38.perso";
 
 // Variable post by the invite beta form.
 $email = $_POST['email'];
 if($email){
 
   // Open a connection only if needed.
-  $username = "root";
-  $password = "root";
-  $hostname = "127.0.0.1";
+  //$username = "root";
+  //$password = "root";
+  //$hostname = "127.0.0.1";
 
   $con = mysql_connect($hostname, $username, $password);
   if (!$con) {
@@ -28,10 +28,10 @@ if($email){
 		('$email')";
 
     if (!mysql_query($sql,$con)) {
-      $form_message = 'Something went wrong during the request. Sorry try later.';
+      $form_message = 'Something went wrong during the request. Please try again later.';
   		die('Error: ' . mysql_error());
     } else {
-      $form_message = "Thanks for subscribing for and invite, we'll let you know as soon as your access has been created";
+      $form_message = "Thanks for registering for an invite, we'll let you know as soon as your access has been created";
       // send an email to contact to add it manually.
       $to = "contact@cottontracks.com";
       $subject = "[URGENT] Invitation private beta";
@@ -41,7 +41,7 @@ if($email){
       mail($to,$subject,$message,$headers);
     }
   } else {
-     $form_message = 'This is not a valid adress email';
+     $form_message = 'This is not a valid email address';
   }
   mysql_close($con);
 }
