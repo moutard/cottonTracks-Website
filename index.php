@@ -240,31 +240,33 @@ if($email){
 	</div>
 	<div id="invite">
 		<div class="content_column">
-			<div id='letter_border'></div>
-			<div id='stamp'></div>
-			<h2>From Beta with Love</h2>
-			<p>We are currently running a private beta<br>
-			Add your Google Account email to the waiting list,<br>
-			and we will send you an invitation for cottonTracks Beta.</p>
-			<div id="email_field">
-				<form method="post" action="index.php#email_field">
-					<?php
-            // If the email was sent put it on the field.
-            if($email){
-              echo '<input id="email" type="text" name="email" value="'.$email.'">';
-            } else {
-              echo '<input id="email" type="text" name="email" value="Enter your Google Account email">';
-            }
-          ?>
-          <input id="validation" type="submit" value="Invite my account"/>
-          <?php
-            if($form_message){
-              echo '<p class="form_message">'.$form_message.'</p>';
-            }
-          ?>
-				</form>
+			<div id="letter">
+				<div id='letter_border'></div>
+				<div id='stamp'></div>
+				<h2>From Beta with Love</h2>
+				<p>We are currently running a private beta<br>
+				Add your Google Account email to the waiting list,<br>
+				and we will send you an invitation for cottonTracks Beta.</p>
+				<div id="email_field">
+					<form method="post" action="index.php#email_field">
+						<?php
+	            // If the email was sent put it on the field.
+	            if($email){
+	              echo '<input id="email" type="text" name="email" value="'.$email.'">';
+	            } else {
+	              echo '<input id="email" type="text" name="email" value="Enter your Google Account email">';
+	            }
+	          ?>
+	          <input id="validation" type="submit" value="Invite my account"/>
+	          <?php
+	            if($form_message){
+	              echo '<p class="form_message">'.$form_message.'</p>';
+	            }
+	          ?>
+					</form>
+				</div>
+				<div id='pastille'></div>
 			</div>
-			<div id='pastille'></div>
 		</div>
 	</div>
 	<div id="footer">
