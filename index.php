@@ -155,9 +155,9 @@ if($email){
 				<div class="badge">
 					<div class="picto"><img src='images/accuracy.png' alt='accuracy picto'></div>
 					<h3>Automated and Accurate</h3>
-					<p>We understands what elements<br/>
+					<p>We understand what elements<br/>
 					of a page you judge interesting<br/>
-					and aggregate with other content<br/>
+					and aggregate them with other content<br/>
 					from the same subject.</p>
 				</div>
 				<div class="badge">
