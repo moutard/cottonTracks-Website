@@ -1,7 +1,9 @@
 $(document).on("ready",function(){
   	$("#request_button").click(function(){
 		var toScroll = $(document).height()-$(window).height();
-		$("body,html").animate({scrollTop: toScroll}, 1000);
+		$("body,html").animate({scrollTop: toScroll}, 1000, function(){
+			$('#email').focus();
+		});
 	});
 
 	$('#email').focus(function(){
