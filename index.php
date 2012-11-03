@@ -59,6 +59,7 @@ if($email){
 	<script type="text/javascript" src="javascript/ga.js"></script>
 	<script type="text/javascript" src="javascript/konami.js"></script>
 	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<!-- Cotton.index -->
 	<script type="text/javascript" src="javascript/index.js"></script>
 	<link rel="stylesheet/less" type="text/css" href="media/index.less" />
 	<!-- less script should be after .less file -->

@@ -1,6 +1,6 @@
 'use strict';
 (function(){
-  $(document).on("ready",function(){
+  $(document).ready(function(){
     $(window).resize(function() {
       positionFooter();
     });
