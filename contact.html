@@ -8,7 +8,6 @@
   
 	<script type="text/javascript" src="lib/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/class.js"></script>
-	<script type="text/javascript" src="lib/underscore.js"></script>
 	<script type="text/javascript" src="javascript/ga.js"></script>
 	<script type="text/javascript" src="javascript/konami.js"></script>
 	<script type="text/javascript" src="javascript/contact.js"></script>
@@ -24,7 +23,8 @@
 <body>
 <!-- SDK Javascript Facebook -->
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<script>
+	(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
 		js = d.createElement(s); js.id = id;
@@ -49,18 +49,14 @@
 	</div>
 	<div id="main">
 		<div class="content_column">
-		  <p> Mentors, investors, advisors, experts, if you want to hop on cottonTracks train, and contribute make it go forward,<br>Push the button and find a good way to contact us</p>
+		  <p class='contact_message'> Mentors, investors, advisors, experts, if you want to hop on cottonTracks train, and contribute make it go forward,<br>Push the button and find a good way to contact us</p>
 		  <div class="contact_button"> CONTACT US </div>
 		</div>
 	</div>
 	<div id="footer">
 		<div class="content_column">
-			<div class="attribution"> 
-				<div id="attributionpigeon">“Pigeon” symbol by Olivier Guin, from thenounproject.com collection.</div>
-				<div id="attributionsmoke_signals">“Fire” symbol by Nicolas Hue, “Blanket” and “Cloud” symbols from thenounproject.com collection.</div>
-				<div id="attributioncans">“Can” symbol by Megan Strickland, from thenounproject.com collection.</div>
-				<div id="attributionmorse">“Morse” symbol not from thenounproject.com collection.</div>
-				<div id="attributionbottle">“Bottle” symbol by Jiayuan Peng, from thenounproject.com collection.</div>
+			<div id="attribution"> 
+				
 			</div>
 			<div id="sitemap">
 				<a href="team.html">Meet the Team</a>
@@ -70,14 +66,15 @@
 			<div id="social">
 				<div class="fb-like" data-href="http://facebook.com/cottontracks" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
 				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.cottontracks.com" data-text="Your browser history becomes cool again! @cottonTracks is a great way to remember the best of what you browse.">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				<div class="g-plusone" data-size="medium" data-href="http://www.cottontracks.com" data-expandTo="top"></div>
 				<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();</script>
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			  </script>
 			</div>
 		</div>
 	</div>

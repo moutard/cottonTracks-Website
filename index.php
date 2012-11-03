@@ -55,12 +55,12 @@ if($email){
 <head>
 	<title>cottonTracks</title>
     <meta http-equiv="Content-Type" content = "text/html; charset=utf-8"/>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.cottontracks.com/images/cTfav16BW.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.cottontracks.com/media/images/cTfav16BW.png">
 	<script type="text/javascript" src="javascript/ga.js"></script>
 	<script type="text/javascript" src="javascript/konami.js"></script>
 	<script type="text/javascript" src="lib/jquery.min.js"></script>
 	<script type="text/javascript" src="javascript/index.js"></script>
-	<link rel="stylesheet/less" type="text/css" href="index.less" />
+	<link rel="stylesheet/less" type="text/css" href="media/index.less" />
 	<!-- less script should be after .less file -->
 	<script type='text/javascript' src='lib/less.js'></script>
 	<!-- +1 snippet personalisation -->
@@ -84,7 +84,7 @@ if($email){
 	<div id="header">
 		<div class="content_column">
 			<div id="logo">
-				<a href="#"><img src="images/cT_logo.png" alt="cottonTracks logo"></a>
+				<a href="#"><img src="media/images/cT_logo.png" alt="cottonTracks logo"></a>
 			</div>
 			<div class="separation"></div>
 			<a href="team.html"><div class="page"><p>Meet the Team</p></div></a>
@@ -101,34 +101,34 @@ if($email){
 		        <div class='shadow'></div>
 		        <div class='glass'></div>
 		        <div class="gear gear1">
-		          <img class="shine animate" src="images/gear1.png" >
-				  <img class="perspective animate" src="images/gear1_perspective.png" >
-				  <img class="shadow animate" src="images/gear1_shadow.png" >
-		          <img class="middlescrew" src="images/lens_gears1_middlescrew.png">
+		          <img class="shine animate" src="media/images/gear1.png" >
+				  <img class="perspective animate" src="media/images/gear1_perspective.png" >
+				  <img class="shadow animate" src="media/images/gear1_shadow.png" >
+		          <img class="middlescrew" src="media/images/lens_gears1_middlescrew.png">
 		        </div>
 
 		        <div class="gear gear2">
-		          <img class="shine animate" src="images/gear2.png" >
-		          <img class="perspective animate" src="images/gear2_perspective.png" >
-				  <img class="shadow animate" src="images/gear2_shadow.png" >
-		          <img class="middlescrew" src="images/lens_gears1_middlescrew.png">
+		          <img class="shine animate" src="media/images/gear2.png" >
+		          <img class="perspective animate" src="media/images/gear2_perspective.png" >
+				  <img class="shadow animate" src="media/images/gear2_shadow.png" >
+		          <img class="middlescrew" src="media/images/lens_gears1_middlescrew.png">
 		        </div>
 
 		        <div class="gear gear3">
-		          <img class="shine animate" src="images/gear3.png" >
-		          <img class="perspective animate" src="images/gear3_perspective.png" >
-				  <img class="shadow animate" src="images/gear3_shadow.png" >
+		          <img class="shine animate" src="media/images/gear3.png" >
+		          <img class="perspective animate" src="media/images/gear3_perspective.png" >
+				  <img class="shadow animate" src="media/images/gear3_shadow.png" >
 		        </div>
 
 		        <div class="gear gear4">
-		          <img class="shine animate" src="images/gear4.png" >
-		          <img class="perspective animate" src="images/gear4_perspective.png" >
-				  <img class="shadow animate" src="images/gear4_shadow.png" >
+		          <img class="shine animate" src="media/images/gear4.png" >
+		          <img class="perspective animate" src="media/images/gear4_perspective.png" >
+				  <img class="shadow animate" src="media/images/gear4_shadow.png" >
 		        </div>
 			</div>
-	        <img class="cache" src="images/gears_cache.png">
+	        <img class="cache" src="media/images/gears_cache.png">
       		<div id="door">
-				<img class="ct-lens_door" src='images/lens_door.png'>
+				<img class="ct-lens_door" src='media/images/lens_door.png'>
 			</div>
 			<div id="tagline">Turn Google Chrome into a powerful memory engine.<br>
 			Love your history again.</div>
@@ -145,7 +145,7 @@ if($email){
 		<div class="content_column">
 			<div class="restricted_column">
 				<div class="badge">
-					<div class="picto"><img src='images/best_browsed.png' alt='only_the_best picto'></div>
+					<div class="picto"><img src='media/images/best_browsed.png' alt='only_the_best picto'></div>
 					<h3>The Best of what you browsed</h3>
 					<p>cottonTracks is a browser extension<br/>
 					that remembers the web just like you.<br/>
@@ -153,7 +153,7 @@ if($email){
 					forget about the noise.</p>
 				</div>
 				<div class="badge">
-					<div class="picto"><img src='images/accuracy.png' alt='accuracy picto'></div>
+					<div class="picto"><img src='media/images/accuracy.png' alt='accuracy picto'></div>
 					<h3>Automated and Accurate</h3>
 					<p>We understand what elements<br/>
 					of a page you judge interesting<br/>
@@ -161,7 +161,7 @@ if($email){
 					from the same subject.</p>
 				</div>
 				<div class="badge">
-					<div class="picto"><img src='images/privacy.png' alt='privacy picto'></div>
+					<div class="picto"><img src='media/images/privacy.png' alt='privacy picto'></div>
 					<h3>Parse content, not people</h3>
 					<p>Your name, email address or the age<br/>
 					of your grandma’s dog are not required<br/>
@@ -178,14 +178,14 @@ if($email){
 			<div id="stripe">
 			</div>
 			<div id="laptop">
-				<img src='images/ordi.png' alt='cottonTracks screenshot'>
-				<img id='kittens' src='images/kitty_screenshot.png' alt='meow'>
+				<img src='media/images/ordi.png' alt='cottonTracks screenshot'>
+				<img id='kittens' src='media/images/kitty_screenshot.png' alt='meow'>
 			</div>
 			<div class="dot milk milk_fade fade">
 			</div>
 			<div class="dot milk">
 				<div class="hint">
-					<img id="meow" src="images/kitty.png">
+					<img id="meow" src="media/images/kitty.png">
 					<h3> Meoww…</h3>
 				</div>
 			</div>

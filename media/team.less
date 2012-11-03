@@ -1,0 +1,168 @@
+@font-face{
+	font-family: Edmondsans;
+	src: url('fonts/Edmondsans_Medium.otf');
+}
+
+@font-face{
+	font-family: EdmondsansLight;
+	src: url('fonts/Edmondsans_Regular.otf');
+}
+@font-face{
+	font-family: HelveticaNeueMedium;
+	src: url('fonts/HelveticaNeue_Medium.ttf');
+}
+
+body{
+	background-image:url('images/brick_background.jpg');
+	margin:0;
+	height: 100%;
+	font-family:"helvetica neue", helvetica, arial;
+	-webkit-font-smoothing: antialiased;
+}
+html{
+	padding:0;
+	margin:0;
+	height: 100%;
+}
+
+
+.content_column{
+	width: 1000px;
+	margin: auto;
+}
+
+#header{
+	height: 75px;
+	background-color: #e6e6e6;
+	position:relative;
+	z-index:1;
+
+	#logo{
+		width: 280px;
+		float: left;
+		margin-left: 116px;
+	}
+
+	.page{
+		float: left;
+		text-align: center;
+		width: 150px;
+		height: 75px;
+		font-family: Edmondsans;
+		font-size: 1.1em;
+		text-decoration: none;
+		color: #333333;
+
+		p{
+			margin-top: 26px;
+			margin-bottom: 26px;
+		}
+	}
+
+	.separation{
+		float: left;
+		width: 1px;
+		height: 75px;
+		background-color: #c4c4c4;
+	}
+}
+
+#team_members{
+	width: 900px;
+	margin: auto;
+}
+
+#main{
+	background-image: url('images/header_shadow.png');
+	background-repeat: repeat-x;
+}
+
+.profile{
+	display: inline-block;
+	width: 200px;
+	margin-top: 28px;
+	padding: 12px;
+	vertical-align:top;
+	
+	.picture{
+		width: 183px;
+		margin: auto;
+	}
+	
+	.contenu{
+		position: relative;
+		top:-40px;
+	}
+	
+	.description{
+		background-color: #f8f8f8;
+		width: 183px;
+		margin: auto;
+	}
+	
+	h3, h4{
+		text-align: center;
+		font-family: Edmondsans;
+		font-weight: normal;
+		color: #333333;
+		margin: 5px;
+	}
+	
+	h3{
+		font-size: 1.3em;
+			
+	}
+	
+	
+	p{
+		padding: 10px;
+		text-align: left;
+		font-size: 0.9em;
+		color: #333333;
+		font-weight: normal;
+	}
+}
+
+
+#footer{
+	background-color: #252525;
+	height: 60px;
+	clear: both;
+	width: 100%;
+	bottom: 0;
+	opacity: 0;
+
+	.content_column{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		position: relative;
+	}
+
+	#sitemap{
+		float: left;
+		margin-left: 40px;
+
+		a{
+			color: #f8f8f8;
+			margin-right: 40px;
+			font-size: 1.1em;
+			text-align: center;
+			font-family: Edmondsans;
+			text-decoration: none;
+		}
+	}
+
+	#social{
+		float:left;
+		position: absolute;
+		right: 20px;
+
+		.fb-like{
+			top: -3px;
+		}
+
+		.twitter-share-button{
+			margin-left: 30px;
+		}
+	}
+}

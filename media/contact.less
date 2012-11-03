@@ -1,3 +1,32 @@
+@column_content_width: 1000px;
+@contact_button_width: 120px;
+@contact_button_height: 20px;
+
+// CLEARFIX
+.clearfix {
+
+  &:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
 @font-face{
 	font-family: Edmondsans;
 	src: url('fonts/Edmondsans_Medium.otf');
@@ -27,7 +56,8 @@ html{
 
 
 .content_column{
-	width: 1000px;
+	.clearfix;
+	width: @column_content_width;
 	margin: auto;
 	position: relative;
 }
@@ -78,12 +108,16 @@ html{
   
   .content_column {
 
-	  > .medium {
-	    > .image_block {
-	      float: left;
-	      width: 240px;
-        margin: auto;
-        margin-top: 100px;
+	   > .medium {
+	     display: block;
+	     position: relative;
+	     
+	     > .image_block {
+
+	       float: left;
+	       width: 240px;
+	       margin: auto;
+         margin-top: 100px;
 	      
 	      > img {
 	        left: 300px;
@@ -99,12 +133,14 @@ html{
         > .image_label {
           width: 100%;
           text-align: center;
+          font-weight: bold;
         }
 	    }
 	    
 
 	    > .description {
 	      position: absolute;
+	      width: 450px;
 	      top: 100px;
 	      left: 400px;
 	      opacity: 0;
@@ -114,19 +150,19 @@ html{
 	      -o-transition: opacity 2s; /* Opera */
 	      
 	      > p {
-	        
+	        height: 73px;
 	      }
 	      
 	      > .mail {
 	        > img {
-	          margin:20px;
+	          margin: 35px;
 	        }
 	        
 	        > a {
-	          color:#8AD1A7;
-	          text-align:center;
-	          position:relative;
-	          top:-28px;
+	          color: #8AD1A7;
+	          text-align: center;
+	          position: relative;
+	          top: -45px;
 	        }
 	      }
 	    }
@@ -138,7 +174,8 @@ html{
 	    top: 160px;
 	    background-color:#262626;
 	    margin: auto;
-	    width:120px;
+	    height: @contact_button_height;
+	    width: @contact_button_width;
 	    padding:20px;
 	    color:#8AD1A7;
 	    cursor:pointer;
@@ -171,12 +208,33 @@ html{
 	  }
 	  
 	  .try_again_button {
-      position: relative;
-      top: 350px;
+      position: absolute;
+      top: 380px;
       background-color:#262626;
       margin: auto;
-      width:120px;
+      height: @contact_button_height;
+      width: @contact_button_width;
+      left: (@column_content_width - @contact_button_width) / 2;
       padding:20px;
+      color:#8AD1A7;
+      cursor:pointer;
+      text-align:center;
+      transition: opacity 1s;
+      -moz-transition: opacity 1s; /* Firefox 4 */
+      -webkit-transition: opacity 1s; /* Safari and Chrome */
+      -o-transition: opacity 1s; /* Opera */
+      opacity:1;
+    }
+	  .try_again_button_2 {
+      position: relative;
+      top: 350px;
+      width: @contact_button_width;
+      height: @contact_button_height;
+      padding:20px;
+      background-color:#262626;
+      margin: auto;
+      
+      
       color:#8AD1A7;
       cursor:pointer;
       text-align:center;
@@ -192,57 +250,13 @@ html{
 
 
 	
-.attribution{
+#attribution {
 	width:900px;
 	position:absolute;
 	top:-20px;
 	color:grey;
 	font-size:12px;
 	text-align:center;
-}
-
-#attributionbottle{
-	display:none;
-	opacity:0;
-	transition: opacity 2s;
-	-moz-transition: opacity 2s; /* Firefox 4 */
-	-webkit-transition: opacity 2s; /* Safari and Chrome */
-	-o-transition: opacity 2s; /* Opera */
-}
-#attributionmorse{
-	display:none;
-	opacity:0;
-	transition: opacity 2s;
-	-moz-transition: opacity 2s; /* Firefox 4 */
-	-webkit-transition: opacity 2s; /* Safari and Chrome */
-	-o-transition: opacity 2s; /* Opera */
-}
-
-#attributionpigeon{
-	display:none;
-	opacity:0;
-	transition: opacity 2s;
-	-moz-transition: opacity 2s; /* Firefox 4 */
-	-webkit-transition: opacity 2s; /* Safari and Chrome */
-	-o-transition: opacity 2s; /* Opera */
-}
-
-#attributioncans{
-	display:none;
-	opacity:0;
-	transition: opacity 2s;
-	-moz-transition: opacity 2s; /* Firefox 4 */
-	-webkit-transition: opacity 2s; /* Safari and Chrome */
-	-o-transition: opacity 2s; /* Opera */
-}
-
-#attributionsmoke_signals{
-	display:none;
-	opacity:0;
-	transition: opacity 2s;
-	-moz-transition: opacity 2s; /* Firefox 4 */
-	-webkit-transition: opacity 2s; /* Safari and Chrome */
-	-o-transition: opacity 2s; /* Opera */
 }
 
 #footer{
