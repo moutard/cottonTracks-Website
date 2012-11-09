@@ -124,14 +124,20 @@ html{
 }
 
 
+@media (min-height : 809px){
+	#footer{position: fixed;}
+}
+@media (max-height : 809px){
+	#footer{position: static;}
+}
+
 #footer{
 	background-color: #252525;
 	height: 60px;
 	clear: both;
 	width: 100%;
 	bottom: 0;
-	opacity: 0;
-
+	
 	.content_column{
 		padding-top: 20px;
 		padding-bottom: 20px;
