@@ -5,10 +5,6 @@ $(document).on("ready",function(){
 	$('#main p').css('opacity','0');
 	$('#contactMedium').css('opacity','1');
 	});
-	
-	$(window).resize(function() {
-		positionFooter();
-	});
 });	
 	
 var lContactMedium = [];
@@ -120,17 +116,3 @@ function blink() {
 }
 
 var lancement = 0;
-
-function positionFooter() {
-	if ($('#header').height()+$('#main').height()+$('#footer').height() <= $(window).height()) {
-		$('#footer').css({'position': 'fixed'});
-	} else {
-		$('#footer').css({'position': 'static'});
-	}
-	if (lancement === 0) {
-		$('#footer').css({'opacity': '1'});
-	}
-}
-
-
-window.onload = positionFooter;
