@@ -200,14 +200,6 @@
         self.start_selection();
       });
 
-      if (($('#header').height() + $('#main').height() + $('#footer').height()) <= $(window).height()) {
-        $('#footer').css({'position': 'fixed'});
-      } else {
-        $('#footer').css({'position': 'static'});
-      }
-
-      $('#footer').css({'opacity': '1'});
-
       self._$page = $('#main .content_column');
       for(var i=0, oMedium; oMedium = self._lMediums[i]; i++){
         oMedium.$().hide();

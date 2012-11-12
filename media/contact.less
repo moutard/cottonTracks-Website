@@ -98,7 +98,8 @@ html{
 	}
 }
 #main {
-
+	height: 510px;
+	
 	> h2 {
     font-weight:bold;
     color:#8AD1A7;
@@ -107,6 +108,11 @@ html{
   }
   
   .content_column {
+
+    > .contact_message{
+    	padding: 20px;
+    	margin:0;
+    }
 
 	   > .medium {
 	     display: block;
@@ -249,14 +255,12 @@ html{
 }
 
 
-	
-#attribution {
-	width:900px;
-	position:absolute;
-	top:-20px;
-	color:grey;
-	font-size:12px;
-	text-align:center;
+
+@media (min-height : 645px){
+	#footer{position: fixed;}
+}
+@media (max-height : 645px){
+	#footer{position: static;}
 }
 
 #footer{
@@ -265,11 +269,9 @@ html{
 	clear: both;
 	width: 100%;
 	bottom: 0;
-	opacity: 0;
-
+	
 	.content_column{
 		padding-top: 20px;
-		padding-bottom: 20px;
 		position: relative;
 	}
 
@@ -299,5 +301,14 @@ html{
 		.twitter-share-button{
 			margin-left: 30px;
 		}
+	}
+	
+	#attribution {
+		width:900px;
+		position:absolute;
+		top:-20px;
+		color:grey;
+		font-size:12px;
+		text-align:center;
 	}
 }
