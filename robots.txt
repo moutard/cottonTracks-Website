@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /whatSUP/
+Disallow: /registration.html
+Disallow: /howto.html
+Disallow: /media/images/howto/
