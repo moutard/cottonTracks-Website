@@ -614,6 +614,12 @@ a.download_btnON:active {
         text-align: center;
 }
 
+.ui-dialog-titlebar-close{
+	position: absolute;
+	left: 456px;
+	font-size: 17px;
+}
+
 .ui-dialog h4,
 .ui-dialog div {
         padding:8px 0 12px 10px;
