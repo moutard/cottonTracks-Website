@@ -295,7 +295,7 @@ textarea { }
 
 #team_list{
 	width: 880px;
-	margin: 30px auto;
+	margin: 65px auto;
 	font-family: "SourceSansPro-Regular", Arial, sans-serif;
 }
 
@@ -303,7 +303,7 @@ textarea { }
 	float:left;
 	height: 163px;
 	width: 420px;
-	margin: 30px 10px 10px 10px;
+	margin: 50px 10px 22px 10px;
 }
 
 .team_pic{
@@ -339,14 +339,14 @@ textarea { }
 #wb_register {
   height: 61px;
   margin: 56px auto 0;
-  width: 677px;
+  width: 496px;
 }
 
 #button_container {
   float: left;
 }
 
-a.download_btn {
+a.download_btnCWS {
   background: url("media/images/CWS_button.png") no-repeat scroll 0 0 transparent;
   display: block;
   height:69px;
@@ -354,7 +354,19 @@ a.download_btn {
   cursor: pointer;
 }
 
-a.download_btn:active {
+a.download_btnCWS:active {
+  background-position: 0 -68px;
+}
+
+a.download_btnON {
+  background: url("media/images/ON_button.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  height:69px;
+  width:248px;
+  cursor: pointer;
+}
+
+a.download_btnON:active {
   background-position: 0 -68px;
 }
 
