@@ -33,7 +33,7 @@ if($email){
   //     } else {
       $form_message = "Thanks for registering for an invite, we'll let you know as soon as your access has been created";
       // send an email to contact to add it manually.
-      $to = "blue@cottontracks.com";
+      $to = "contact@cottontracks.com";
       $subject = "[URGENT] Invitation private beta";
       $message = "A new client ask for an inviation. His email is ".$email." ";
       $from = "social@cottontracks.com";
