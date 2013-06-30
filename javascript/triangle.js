@@ -6,6 +6,8 @@ jQuery(document).ready(function($){
 	
 	var triangle_width = (Math.floor(window_width/(2*triangle_size))+1)*2*triangle_size+triangle_size; //Add a triangle_size to align the triangle properly
 	var triangle_margin = -2*triangle_size*(1-window_width/(4*triangle_size)+Math.floor(window_width/(4*triangle_size)));
+	
+	var click_count = 0; //count the number of click on the triangle
 
 	//Set CSS 
 	$("#triangle").width(triangle_width);
@@ -15,7 +17,7 @@ jQuery(document).ready(function($){
 	
 	//Create the triangles
 	function creationTriangles(triangle_count){
-		for(i=0; i<triangle_count; i++){
+		for(var i=0; i<triangle_count; i++){
 		  $("<div>")
 	    .clone(false)
 	    .appendTo("#triangle")
@@ -29,7 +31,7 @@ jQuery(document).ready(function($){
 	
 	//Remove triangle nodes
 	function removeTriangles(triangle_count){
-		for(i=0; i<(triangle_count); i++){  
+		for(var i=0; i<(triangle_count); i++){  
 			$(triangle_right[i]).remove();
 			$(triangle_left[i]).remove();
 		};
@@ -48,7 +50,7 @@ jQuery(document).ready(function($){
 	};
 	
 	function colorLine(i){
-		for(j=0; j<triangle_number/line_number; j++){
+		for(var j=0; j<triangle_number/line_number; j++){
 			var rand_right = Math.floor(10*Math.random());
 			if(rand_right<1){
 				setTriangleRightColor(i*triangle_number/line_number+j, "0b9b96");
@@ -63,7 +65,7 @@ jQuery(document).ready(function($){
 				setTriangleRightColor(i*triangle_number/line_number+j, "0fab9a");
 			}
 		}
-		for(j=0; j<triangle_number/line_number; j++){
+		for(var j=0; j<triangle_number/line_number; j++){
 			var rand_left = Math.floor(10*Math.random());
 			if(rand_left<1){
 				setTriangleLeftColor(i*triangle_number/line_number+j, "0b9b96");
@@ -81,75 +83,74 @@ jQuery(document).ready(function($){
 	};
 	
 	function initAnimationTriangle(){
-		for(i=0; i<line_number; i++){
-			colorLine(i);
-		};
+		for(var j=0; j<10; j++){
+			for(var i=0; i<line_number; i++){
+				colorLine(i);
+			}
+		}
+	};
+
+	function clearTriangleLine(j){
+		var trianglePerLine = triangle_number/line_number;
+		var initTriangle = j*trianglePerLine; //get the 1st triangle to clean
+		for(var i=0; i<trianglePerLine; i++){
+			$(triangle_right[initTriangle+i]).removeClass('triangle-right-0b9b96');
+			$(triangle_right[initTriangle+i]).removeClass('triangle-right-0f8692');
+			$(triangle_right[initTriangle+i]).removeClass('triangle-right-13688c');
+			$(triangle_right[initTriangle+i]).removeClass('triangle-right-0fab9a');
+			$(triangle_left[initTriangle+i]).removeClass('triangle-left-0b9b96');
+			$(triangle_left[initTriangle+i]).removeClass('triangle-left-0f8692');
+			$(triangle_left[initTriangle+i]).removeClass('triangle-left-13688c');
+			$(triangle_left[initTriangle+i]).removeClass('triangle-left-0fab9a');
+		}
 	};
 	
-	function clearTriangle(){
-		for(i=0; i<triangle_number; i++){
-			$(triangle_right[i]).removeClass('triangle-right-0b9b96');
-			$(triangle_right[i]).removeClass('triangle-right-0f8692');
-			$(triangle_right[i]).removeClass('triangle-right-13688c');
-			$(triangle_right[i]).removeClass('triangle-right-0fab9a');
-			$(triangle_left[i]).removeClass('triangle-left-0b9b96');
-			$(triangle_left[i]).removeClass('triangle-left-0f8692');
-			$(triangle_left[i]).removeClass('triangle-left-13688c');
-			$(triangle_left[i]).removeClass('triangle-left-0fab9a');
+	function clearAllTriangle(){
+		for(var i=0; i<line_number; i++){
+			clearTriangleLine(i);
 		}
-	}
+	};
 	
 	//Animate the triangle for the 1st time
 	initAnimationTriangle();
-	
-	//Turn triangle to light gray on click
+	for(var i=0; i<200; i++){
+	  setTimeout(function(){setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "0b9b96")}, i*100);
+		setTimeout(function(){setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "0b9b96")}, i*100);
+		setTimeout(function(){setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "0f8692")}, i*100);
+		setTimeout(function(){setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "0f8692")}, i*100);
+		setTimeout(function(){setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "13688c")}, i*100);
+		setTimeout(function(){setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "13688c")}, i*100);
+		setTimeout(function(){setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "0fab9a")}, i*100);
+		setTimeout(function(){setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "0fab9a")}, i*100);
+	}
+
 	$("#triangle").click(function(e){
-		initAnimationTriangle();
+	//	if (click_count <2){
+			click_count++;
+			for(var i=0; i<line_number; i++){
+				colorLine(i);
+			}
+	//}
+	//else{
+	//	click_count = 0; //reset counter
+	//	for(var i=0; i<3; i++){
+	//		clearTriangleLine(4+2*i);
+	//	}
+	//}
 	});
 	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_right.length * Math.random());
-	  setTriangleRightColor(pick, "0b9b96");
+	$("#triangle").mousemove(function(){
+	  setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "0b9b96");
+		setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "0b9b96");
+		setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "0f8692");
+		setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "0f8692");
+		setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "13688c");
+		setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "13688c");
+		setTriangleRightColor( Math.round(triangle_right.length * Math.random()), "0fab9a");
+		setTriangleLeftColor( Math.round(triangle_right.length * Math.random()), "0fab9a");
 	});
 	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_left.length * Math.random());
-	  setTriangleLeftColor(pick, "0b9b96");
-	});
-	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_right.length * Math.random());
-	  setTriangleRightColor(pick, "0f8692");
-	});
-	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_left.length * Math.random());
-	  setTriangleLeftColor(pick, "0f8692");
-	});
-	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_right.length * Math.random());
-	  setTriangleRightColor(pick, "13688c");
-	});
-	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_left.length * Math.random());
-		setTriangleLefttColor(pick, "13688c");
-	});
-	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_right.length * Math.random());
-	  setTriangleRightColor(pick, "0fab9a");
-	});
-	
-	$("#triangle").mousemove(function(e){
-	  pick = Math.round(triangle_left.length * Math.random());
-		setTriangleLeftColor(pick, "0fab9a");
-	});
-	
-	$("#triangle").mousemove(function(e){
-		console.log(triangle_number);
-	});
+
 	
 	$(window).resize(function() {
 		//Recalculate values at the creation
@@ -172,7 +173,6 @@ jQuery(document).ready(function($){
 			initAnimationTriangle();
 		}
 		else if (newTriangle_number-triangle_number<0){ //to make sure it's !=0. Otherwise it useless to run the next part of the script
-			console.log("TEST");
 			removeTriangles(triangle_number-newTriangle_number);
 			triangle_number = newTriangle_number;
 			triangle_right = $('#triangle .triangle-right');

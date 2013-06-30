@@ -656,7 +656,7 @@ a.download_btnON:active {
 		border-left: 24px solid #f2f2f2;
 		margin-bottom: -14px;
 		-webkit-transform:rotate(360deg); 
-		transition: all 0.2s ease 0s;
+		transition: all 0.1s ease 0s;
 }
 
 .triangle-left
@@ -669,7 +669,7 @@ a.download_btnON:active {
 		border-right: 24px solid #f2f2f2;
 		margin-bottom: -14px;
 		-webkit-transform:rotate(360deg);
-		transition: all 0.2s ease 0s;
+		transition: all 0.1s ease 0s;
 }
 
 .triangle-right-0fab9a
@@ -726,8 +726,773 @@ a.download_btnON:active {
 	z-index: 0;
 }
 
+#triangle_FF_IE_O_Support{
+	position: absolute;
+	width:100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: #333333;
+	z-index: 0;
+	background: url('media/images/triangle_bg.png') repeat-x center top;
+}
+
 #triangle{
 	margin-top: -12px;
 	overflow: hidden;
 	height: 650px;
+}
+
+/*Animation Gears*/
+.ct-lens {
+  position: relative;
+  top: 58px;
+  margin: auto;
+  width: 301px;
+  height: 301px;
+  background-image: url('images/gears_background.png');
+  background-size: 100% 100%;
+  z-index: 0;
+  opacity: 0;
+}
+.ct-lens > .shadow {
+  width: 301px;
+  height: 301px;
+  position: absolute;
+  z-index: 5;
+  background-image: url('images/gears_border_shadow.png');
+}
+.ct-lens > .glass {
+  width: 301px;
+  height: 301px;
+  position: absolute;
+  z-index: 10;
+  background-image: url('images/light.png');
+}
+@-webkit-keyframes rotate-clockwise {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate-clockwise {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate-clockwise {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-counter-clockwise {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes rotate-counter-clockwise {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-o-keyframes rotate-counter-clockwise {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes rotate-counter-clockwise-acoup {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  4% {
+    -webkit-transform: rotate(0deg);
+  }
+  5% {
+    -webkit-transform: rotate(-18deg);
+  }
+  9% {
+    -webkit-transform: rotate(-18deg);
+  }
+  10% {
+    -webkit-transform: rotate(-36deg);
+  }
+  14% {
+    -webkit-transform: rotate(-36deg);
+  }
+  15% {
+    -webkit-transform: rotate(-54deg);
+  }
+  19% {
+    -webkit-transform: rotate(-54deg);
+  }
+  20% {
+    -webkit-transform: rotate(-72deg);
+  }
+  24% {
+    -webkit-transform: rotate(-72deg);
+  }
+  25% {
+    -webkit-transform: rotate(-90deg);
+  }
+  29% {
+    -webkit-transform: rotate(-90deg);
+  }
+  30% {
+    -webkit-transform: rotate(-108deg);
+  }
+  34% {
+    -webkit-transform: rotate(-108deg);
+  }
+  35% {
+    -webkit-transform: rotate(-126deg);
+  }
+  39% {
+    -webkit-transform: rotate(-126deg);
+  }
+  40% {
+    -webkit-transform: rotate(-144deg);
+  }
+  44% {
+    -webkit-transform: rotate(-144deg);
+  }
+  45% {
+    -webkit-transform: rotate(-162deg);
+  }
+  49% {
+    -webkit-transform: rotate(-162deg);
+  }
+  50% {
+    -webkit-transform: rotate(-180deg);
+  }
+  54% {
+    -webkit-transform: rotate(-180deg);
+  }
+  55% {
+    -webkit-transform: rotate(-198deg);
+  }
+  59% {
+    -webkit-transform: rotate(-198deg);
+  }
+  60% {
+    -webkit-transform: rotate(-216deg);
+  }
+  64% {
+    -webkit-transform: rotate(-216deg);
+  }
+  65% {
+    -webkit-transform: rotate(-234deg);
+  }
+  69% {
+    -webkit-transform: rotate(-234deg);
+  }
+  70% {
+    -webkit-transform: rotate(-252deg);
+  }
+  74% {
+    -webkit-transform: rotate(-252deg);
+  }
+  75% {
+    -webkit-transform: rotate(-270deg);
+  }
+  79% {
+    -webkit-transform: rotate(-270deg);
+  }
+  80% {
+    -webkit-transform: rotate(-288deg);
+  }
+  84% {
+    -webkit-transform: rotate(-288deg);
+  }
+  85% {
+    -webkit-transform: rotate(-306deg);
+  }
+  89% {
+    -webkit-transform: rotate(-306deg);
+  }
+  90% {
+    -webkit-transform: rotate(-324deg);
+  }
+  94% {
+    -webkit-transform: rotate(-324deg);
+  }
+  95% {
+    -webkit-transform: rotate(-342deg);
+  }
+  99% {
+    -webkit-transform: rotate(-342deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes rotate-counter-clockwise-acoup {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  4% {
+    -moz-transform: rotate(0deg);
+  }
+  5% {
+    -moz-transform: rotate(-18deg);
+  }
+  9% {
+    -moz-transform: rotate(-18deg);
+  }
+  10% {
+    -moz-transform: rotate(-36deg);
+  }
+  14% {
+    -moz-transform: rotate(-36deg);
+  }
+  15% {
+    -moz-transform: rotate(-54deg);
+  }
+  19% {
+    -moz-transform: rotate(-54deg);
+  }
+  20% {
+    -moz-transform: rotate(-72deg);
+  }
+  24% {
+    -moz-transform: rotate(-72deg);
+  }
+  25% {
+    -moz-transform: rotate(-90deg);
+  }
+  29% {
+    -moz-transform: rotate(-90deg);
+  }
+  30% {
+    -moz-transform: rotate(-108deg);
+  }
+  34% {
+    -moz-transform: rotate(-108deg);
+  }
+  35% {
+    -moz-transform: rotate(-126deg);
+  }
+  39% {
+    -moz-transform: rotate(-126deg);
+  }
+  40% {
+    -moz-transform: rotate(-144deg);
+  }
+  44% {
+    -moz-transform: rotate(-144deg);
+  }
+  45% {
+    -moz-transform: rotate(-162deg);
+  }
+  49% {
+    -moz-transform: rotate(-162deg);
+  }
+  50% {
+    -moz-transform: rotate(-180deg);
+  }
+  54% {
+    -moz-transform: rotate(-180deg);
+  }
+  55% {
+    -moz-transform: rotate(-198deg);
+  }
+  59% {
+    -moz-transform: rotate(-198deg);
+  }
+  60% {
+    -moz-transform: rotate(-216deg);
+  }
+  64% {
+    -moz-transform: rotate(-216deg);
+  }
+  65% {
+    -moz-transform: rotate(-234deg);
+  }
+  69% {
+    -moz-transform: rotate(-234deg);
+  }
+  70% {
+    -moz-transform: rotate(-252deg);
+  }
+  74% {
+    -moz-transform: rotate(-252deg);
+  }
+  75% {
+    -moz-transform: rotate(-270deg);
+  }
+  79% {
+    -moz-transform: rotate(-270deg);
+  }
+  80% {
+    -moz-transform: rotate(-288deg);
+  }
+  84% {
+    -moz-transform: rotate(-288deg);
+  }
+  85% {
+    -moz-transform: rotate(-306deg);
+  }
+  89% {
+    -moz-transform: rotate(-306deg);
+  }
+  90% {
+    -moz-transform: rotate(-324deg);
+  }
+  94% {
+    -moz-transform: rotate(-324deg);
+  }
+  95% {
+    -moz-transform: rotate(-342deg);
+  }
+  99% {
+    -moz-transform: rotate(-342deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-o-keyframes rotate-counter-clockwise-acoup {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  4% {
+    -o-transform: rotate(0deg);
+  }
+  5% {
+    -o-transform: rotate(-18deg);
+  }
+  9% {
+    -o-transform: rotate(-18deg);
+  }
+  10% {
+    -o-transform: rotate(-36deg);
+  }
+  14% {
+    -o-transform: rotate(-36deg);
+  }
+  15% {
+    -o-transform: rotate(-54deg);
+  }
+  19% {
+    -o-transform: rotate(-54deg);
+  }
+  20% {
+    -o-transform: rotate(-72deg);
+  }
+  24% {
+    -o-transform: rotate(-72deg);
+  }
+  25% {
+    -o-transform: rotate(-90deg);
+  }
+  29% {
+    -o-transform: rotate(-90deg);
+  }
+  30% {
+    -o-transform: rotate(-108deg);
+  }
+  34% {
+    -o-transform: rotate(-108deg);
+  }
+  35% {
+    -o-transform: rotate(-126deg);
+  }
+  39% {
+    -o-transform: rotate(-126deg);
+  }
+  40% {
+    -o-transform: rotate(-144deg);
+  }
+  44% {
+    -o-transform: rotate(-144deg);
+  }
+  45% {
+    -o-transform: rotate(-162deg);
+  }
+  49% {
+    -o-transform: rotate(-162deg);
+  }
+  50% {
+    -o-transform: rotate(-180deg);
+  }
+  54% {
+    -o-transform: rotate(-180deg);
+  }
+  55% {
+    -o-transform: rotate(-198deg);
+  }
+  59% {
+    -o-transform: rotate(-198deg);
+  }
+  60% {
+    -o-transform: rotate(-216deg);
+  }
+  64% {
+    -o-transform: rotate(-216deg);
+  }
+  65% {
+    -o-transform: rotate(-234deg);
+  }
+  69% {
+    -o-transform: rotate(-234deg);
+  }
+  70% {
+    -o-transform: rotate(-252deg);
+  }
+  74% {
+    -o-transform: rotate(-252deg);
+  }
+  75% {
+    -o-transform: rotate(-270deg);
+  }
+  79% {
+    -o-transform: rotate(-270deg);
+  }
+  80% {
+    -o-transform: rotate(-288deg);
+  }
+  84% {
+    -o-transform: rotate(-288deg);
+  }
+  85% {
+    -o-transform: rotate(-306deg);
+  }
+  89% {
+    -o-transform: rotate(-306deg);
+  }
+  90% {
+    -o-transform: rotate(-324deg);
+  }
+  94% {
+    -o-transform: rotate(-324deg);
+  }
+  95% {
+    -o-transform: rotate(-342deg);
+  }
+  99% {
+    -o-transform: rotate(-342deg);
+  }
+  100% {
+    -o-transform: rotate(-360deg);
+  }
+}
+.ct-lens .rotate-clockwise {
+  -webkit-animation-name: rotate-clockwise;
+  -moz-animation-name: rotate-clockwise;
+  -o-animation-name: rotate-clockwise;
+  -webkit-animation-duration: 10000ms;
+  -moz-animation-duration: 10000ms;
+  -o-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens .rotate-counter-clockwise {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens .rotate-counter-clockwise-acoup {
+  -webkit-animation-name: rotate-counter-clockwise-acoup;
+  -moz-animation-name: rotate-counter-clockwise-acoup;
+  -o-animation-name: rotate-counter-clockwise-acoup;
+  -webkit-animation-duration: 30000ms;
+  -moz-animation-duration: 30000ms;
+  -o-animation-duration: 30000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+}
+.ct-lens > .gear {
+  position: absolute;
+}
+.ct-lens > .gear > * {
+  position: absolute;
+}
+.ct-lens > .gear.gear1 {
+  top: 135px;
+  left: -22px;
+}
+.ct-lens > .gear.gear1 > .middlescrew {
+  width: 117px;
+  height: 117px;
+  z-index: 5;
+}
+.ct-lens > .gear.gear1 > .shine {
+  z-index: 4;
+}
+.ct-lens > .gear.gear1 > .shine.animate {
+  -webkit-animation-name: rotate-clockwise;
+  -moz-animation-name: rotate-clockwise;
+  -o-animation-name: rotate-clockwise;
+  -webkit-animation-duration: 10000ms;
+  -moz-animation-duration: 10000ms;
+  -o-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear1 > .perspective {
+  z-index: 3;
+  margin-top: 3px;
+}
+.ct-lens > .gear.gear1 > .perspective.animate {
+  -webkit-animation-name: rotate-clockwise;
+  -moz-animation-name: rotate-clockwise;
+  -o-animation-name: rotate-clockwise;
+  -webkit-animation-duration: 10000ms;
+  -moz-animation-duration: 10000ms;
+  -o-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear1 > .shadow {
+  z-index: 3;
+  margin-top: -25px;
+  margin-left: -30px;
+}
+.ct-lens > .gear.gear1 > .shadow.animate {
+  -webkit-animation-name: rotate-clockwise;
+  -moz-animation-name: rotate-clockwise;
+  -o-animation-name: rotate-clockwise;
+  -webkit-animation-duration: 10000ms;
+  -moz-animation-duration: 10000ms;
+  -o-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear2 {
+  top: 174px;
+  left: 58px;
+}
+.ct-lens > .gear.gear2 > .middlescrew {
+  width: 117px;
+  height: 117px;
+  margin: 47px 0 0 47px;
+  position: absolute;
+  z-index: 5;
+}
+.ct-lens > .gear.gear2 > .shine {
+  z-index: 4;
+}
+.ct-lens > .gear.gear2 > .shine.animate {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear2 > .perspective {
+  z-index: 3;
+  margin-top: 3px;
+}
+.ct-lens > .gear.gear2 > .perspective.animate {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear2 > .shadow {
+  z-index: 3;
+  margin-top: -18px;
+  margin-left: -25px;
+}
+.ct-lens > .gear.gear2 > .shadow.animate {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear3 {
+  top: -50px;
+  left: -133px;
+}
+.ct-lens > .gear.gear3 > .middlescrew {
+  width: 117px;
+  height: 117px;
+  margin: 47px 0 0 47px;
+  z-index: 5;
+}
+.ct-lens > .gear.gear3 > .shine {
+  z-index: 4;
+}
+.ct-lens > .gear.gear3 > .shine.animate {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear3 > .perspective {
+  z-index: 3;
+  margin-top: 3px;
+}
+.ct-lens > .gear.gear3 > .perspective.animate {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear3 > .shadow {
+  z-index: 3;
+  margin-top: -18px;
+  margin-left: -25px;
+}
+.ct-lens > .gear.gear3 > .shadow.animate {
+  -webkit-animation-name: rotate-counter-clockwise;
+  -moz-animation-name: rotate-counter-clockwise;
+  -o-animation-name: rotate-counter-clockwise;
+  -webkit-animation-duration: 20000ms;
+  -moz-animation-duration: 20000ms;
+  -o-animation-duration: 20000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+}
+.ct-lens > .gear.gear4 {
+  top: -105px;
+  left: 135px;
+}
+.ct-lens > .gear.gear4 > .middlescrew {
+  width: 117px;
+  height: 117px;
+  margin: 47px 0 0 47px;
+  z-index: 5;
+}
+.ct-lens > .gear.gear4 > .shine {
+  z-index: 4;
+}
+.ct-lens > .gear.gear4 > .shine.animate {
+  -webkit-animation-name: rotate-counter-clockwise-acoup;
+  -moz-animation-name: rotate-counter-clockwise-acoup;
+  -o-animation-name: rotate-counter-clockwise-acoup;
+  -webkit-animation-duration: 30000ms;
+  -moz-animation-duration: 30000ms;
+  -o-animation-duration: 30000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+}
+.ct-lens > .gear.gear4 > .perspective {
+  z-index: 3;
+  margin-top: 3px;
+}
+.ct-lens > .gear.gear4 > .perspective.animate {
+  -webkit-animation-name: rotate-counter-clockwise-acoup;
+  -moz-animation-name: rotate-counter-clockwise-acoup;
+  -o-animation-name: rotate-counter-clockwise-acoup;
+  -webkit-animation-duration: 30000ms;
+  -moz-animation-duration: 30000ms;
+  -o-animation-duration: 30000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+}
+.ct-lens > .gear.gear4 > .shadow {
+  z-index: 3;
+  margin-top: -18px;
+  margin-left: -25px;
+}
+.ct-lens > .gear.gear4 > .shadow.animate {
+  -webkit-animation-name: rotate-counter-clockwise-acoup;
+  -moz-animation-name: rotate-counter-clockwise-acoup;
+  -o-animation-name: rotate-counter-clockwise-acoup;
+  -webkit-animation-duration: 30000ms;
+  -moz-animation-duration: 30000ms;
+  -o-animation-duration: 30000ms;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
 }
