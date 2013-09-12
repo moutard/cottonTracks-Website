@@ -1,0 +1,312 @@
+/* ================================ */
+/* = Fonts imported for this page = */
+/* ================================ */
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('media/font/SourceSansPro-Regular.otf') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Semibold';
+    src: url('media/font/SourceSansPro-Semibold.otf') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url('media/font/SourceSansPro-Light.otf') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Animation of the Footer logo*/
+@-webkit-keyframes logoAnimation {
+	from { background-position: 0 0; }
+	to { 	 background-position: -5358px 0; }
+}
+@-moz-keyframes logoAnimation {
+	from { background-position: 0 0; }
+	to { 	 background-position: -5358px 0; }
+}
+-keyframes logoAnimation {
+	from { background-position: 0 0; }
+	to { 	 background-position: -5358px 0; }
+}
+
+/* ============================================== */
+/* = CSS for the main doc screen width >= 900px = */
+/* ============================================== */
+body{
+	background: url('media/images/main_background.png') repeat-x fixed;
+	color:#333333;
+	font-family: 'SourceSansPro-Regular', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: 		antialiased;
+	-ms-font-smoothing: 		antialiased;
+  -o-font-smoothing: 			antialiased;
+  font-smoothing: 				antialiased;
+	margin: 0;
+}
+
+/*Highlight CSS*/
+::selection {
+	background: #aae6c3;
+}
+::-moz-selection {
+	background: #aae6c3;
+}
+
+/* ========== */
+/* = Header = */
+/* ========== */
+header{
+	color:white;
+	font-size: 15px;
+	padding: 0 20px 0 20px;
+	height: 50px;
+	margin-top: 15px;
+}
+
+/*Logo*/
+header h1{
+	background: url('media/images/logo.png') no-repeat;
+	width: 149px;
+	height: 29px;
+	overflow: hidden;
+	margin: 0;
+	float: left;
+}
+
+.offleft a{
+	text-indent: -9000px;
+	display: block;
+}
+
+/*Menu*/
+nav{
+	font-family: 'SourceSansPro-Semibold';
+	text-transform: uppercase;
+	float: right;
+	margin-top: 7px;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+nav a:hover span{
+	border-bottom: 1px solid #89d1a7;
+}
+
+.selected{
+	border-bottom: 1px solid #89d1a7;
+}
+
+h2{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 33px;
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+#green-line{
+	width: 100%;
+	height: 3px;
+	background-color: #12a192;
+}
+
+#light-gray{
+	width: 100%;
+	background-color: #f5f5f5;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.gray-line{
+	width: 100%;
+	height: 1px;
+	background-color: #b3b3b3;
+}
+
+#light-gray div{
+	max-width: 900px;
+	margin: auto;
+}
+
+/* ============== */
+/* = Footer CSs = */
+/* ============== */
+footer{
+	background-color: #333333;
+	min-height: 235px;
+	color: white;
+}
+
+#footer-grid{
+	max-width: 830px;
+	margin: auto;
+	padding-top: 40px;
+}
+
+/*Icon ct*/
+#desk{
+	background: url('media/images/desk.png') no-repeat;
+	width: 310px;
+	height: 143px;
+	float: left;
+}
+
+#anime-ct{
+	background: url('media/images/littleanimation.png') no-repeat;
+	width: 57px;
+	height: 50px;
+	position: relative;
+	top: 69px;
+	left: 91px;
+}
+
+/*Animation control*/
+footer:hover #anime-ct{
+	-webkit-animation: logoAnimation 4s steps(94) 1;
+  -moz-animation:    logoAnimation 4s steps(94) 1;
+	-ms-animation:     logoAnimation 4s steps(94) 1;
+  -o-animation:      logoAnimation 4s steps(94) 1;
+  animation:         logoAnimation 4s steps(94) 1;
+}
+
+#company-name{
+	display: inline-block;
+	float: left;
+	padding-left: 20px;
+	padding-top: 70px;
+}
+
+h6{
+	text-transform: uppercase;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 15px;
+	margin: 0;
+}
+
+h5{
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 25px;
+	margin: 0;
+}
+
+h5 > span{
+	text-decoration: underline;
+	vertical-align: 0.1em;	
+}
+
+#footer-links{
+	display: inline-block;
+	padding-left: 120px;
+	padding-top: 73px;
+}
+
+#social-medias{
+	height: 21px;
+	width: 122px;
+	margin-bottom: 5px;
+}
+
+#social-medias a{
+	float: left;
+	text-indent: -9000px;
+	width: 21px;
+	height: 21px;
+	margin-left: 7px;
+}
+
+#angellist{
+	background: url('media/images/angellist.png') no-repeat;
+}
+
+#facebook{
+	background: url('media/images/facebook.png') no-repeat;
+}
+
+#twitter{
+	background: url('media/images/twitter.png') no-repeat;
+}
+
+#gplus{
+	background: url('media/images/gplus.png') no-repeat;
+}
+
+#footer-links a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 15px;
+}
+
+#footer-links a:hover{
+	text-decoration: underline;
+}
+
+@media only screen and (max-width : 899px), and (max-device-width : 900px) {
+
+#light-gray div{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/* ============== */
+/* = CSS Footer = */
+/* ============== */
+/*Animated Desk*/
+#desk{
+	float: none;
+	margin: auto;
+}
+
+#anime-ct{
+	-webkit-animation: logoAnimation 4s steps(94) infinite;
+  -moz-animation:    logoAnimation 4s steps(94) infinite;
+	-ms-animation:     logoAnimation 4s steps(94) infinite;
+  -o-animation:      logoAnimation 4s steps(94) infinite;
+  animation:         logoAnimation 4s steps(94) infinite;
+}
+
+footer:hover #anime-ct{
+	-webkit-animation: logoAnimation 4s steps(94) infinite;
+	-moz-animation:    logoAnimation 4s steps(94) infinite;
+	-ms-animation:     logoAnimation 4s steps(94) infinite;
+	-o-animation:      logoAnimation 4s steps(94) infinite;
+	animation:         logoAnimation 4s steps(94) infinite;
+}
+
+#company-name{
+	float: none;
+	margin: auto;
+	max-width: 196px;
+	display: inline;
+	text-align: center;
+}
+
+#footer-links{
+	padding-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 0;
+	text-align: center;
+	float: none;
+	width: 100%;
+}
+
+#social-medias{
+	margin-left: auto;
+	margin-right: auto;
+}
+}

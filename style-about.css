@@ -1,0 +1,634 @@
+/* ================================ */
+/* = Fonts imported for this page = */
+/* ================================ */
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('media/font/SourceSansPro-Regular.otf') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Semibold';
+    src: url('media/font/SourceSansPro-Semibold.otf') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url('media/font/SourceSansPro-Light.otf') format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Animation of the Footer logo*/
+@-webkit-keyframes logoAnimation {
+	from { background-position: 0 0; }
+	to { 	 background-position: -5358px 0; }
+}
+@-moz-keyframes logoAnimation {
+	from { background-position: 0 0; }
+	to { 	 background-position: -5358px 0; }
+}
+-keyframes logoAnimation {
+	from { background-position: 0 0; }
+	to { 	 background-position: -5358px 0; }
+}
+
+/* ============================================== */
+/* = CSS for the main doc screen width >= 900px = */
+/* ============================================== */
+body{
+	background: url('media/images/main_background.png') repeat-x fixed;
+	color:#333333;
+	font-family: 'SourceSansPro-Regular', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: 		antialiased;
+	-ms-font-smoothing: 		antialiased;
+  -o-font-smoothing: 			antialiased;
+  font-smoothing: 				antialiased;
+	margin: 0;
+}
+
+/*Highlight CSS*/
+::selection {
+	background: #aae6c3;
+}
+::-moz-selection {
+	background: #aae6c3;
+}
+
+/* ========== */
+/* = Header = */
+/* ========== */
+header{
+	color:white;
+	font-size: 15px;
+	padding: 0 20px 0 20px;
+	height: 50px;
+	margin-top: 15px;
+}
+
+/*Logo*/
+header h1{
+	background: url('media/images/logo.png') no-repeat;
+	width: 149px;
+	height: 29px;
+	overflow: hidden;
+	margin: 0;
+	float: left;
+}
+
+.offleft a{
+	text-indent: -9000px;
+	display: block;
+}
+
+/*Menu*/
+nav{
+	font-family: 'SourceSansPro-Semibold';
+	text-transform: uppercase;
+	float: right;
+	margin-top: 7px;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+nav a:hover span{
+	border-bottom: 1px solid #89d1a7;
+}
+
+.selected{
+	border-bottom: 1px solid #89d1a7;
+}
+
+#video{
+	max-width: 900px;
+	min-height: 325px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+iframe{
+	float:left;
+	margin-right: 35px;
+}
+
+#video-text{
+	color: white;
+	padding-top: 3px;
+	text-align: justify;
+}
+
+h2{
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 33px;
+}
+
+#green-line{
+	width: 100%;
+	height: 3px;
+	background-color: #12a192;
+}
+
+#insights{
+	padding-top: 10px;
+	padding-bottom: 30px;
+	max-width: 900px;
+	margin: auto;
+}
+
+#insights h2{
+	text-align: center;
+}
+
+#insights p{
+	text-align: justify;
+}
+
+.white-bg{
+	background-color: white;
+}
+
+#story{
+	max-width: 900px;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#story h2{
+	text-align: center;
+}
+
+#story p{
+	text-align: justify;
+}
+
+#team-founders{
+	max-width: 776px;
+	min-height: 226px;
+}
+
+#team{
+	max-width: 776px;
+	margin: auto;
+	min-height: 300px;
+}
+
+#team h2{
+	text-align: center;
+}
+
+.team-pic{
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-right: 22px;
+	margin-left: 22px;
+}
+
+h3{
+	margin-bottom: 0;
+	margin-top: 2px;
+	font-size: 15px;
+	width: 150px;
+	text-align: center;
+}
+
+#investors{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 130px;
+	max-width: 900px;
+	margin: auto;
+}
+
+#investors img{
+	margin-right: 20px;
+	margin-left: 20px;
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: all 1s ease;
+}
+
+#investors img:hover{
+	-webkit-filter: grayscale(0%);
+}
+
+#investors div{
+	max-width: 648px;
+	margin: auto;
+}
+
+#press{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 130px;
+	max-width: 900px;
+	margin: auto;
+}
+
+#press img{
+	margin-right: 20px;
+	margin-left: 20px;
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: all 1s ease;
+}
+
+#press img:hover{
+	-webkit-filter: grayscale(0%);
+}
+
+#press div{
+	max-width: 291px;
+	margin: auto;
+}
+
+#investors h4, #press h4{
+	color: #999999;
+	text-align: center;
+}
+
+p span, h4 span{
+	text-decoration: underline;
+	vertical-align: 0.1em;
+}
+
+#light-gray{
+	width: 100%;
+	background-color: #f5f5f5;
+}
+.gray-line{
+	width: 100%;
+	height: 1px;
+	background-color: #b3b3b3;
+}
+
+/*Download button*/
+.download{
+	max-width: 465px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.download-button{
+	width: 240px;
+	height: 49px;
+	background-color: #5bab7d;
+	background-image: url('media/images/download_background.png');
+	background-repeat: repeat-x;
+	border-radius: 			10px;
+	-moz-border-radius: 10px;
+	box-shadow: 				0 2px 1px rgba(0,0,0,0.15);
+	-moz-box-shadow: 		0 2px 1px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.15);
+	float: left;
+}
+
+.button-style{
+	width: 100%;
+	height: 100%;
+	border-radius: 			10px;
+	-moz-border-radius: 10px;
+	box-shadow: 				inset 0 1px 0 rgba(255,255,255,0.28);
+	-moz-box-shadow: 		inset 0 1px 0 rgba(255,255,255,0.28);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.28);
+	background: url('media/images/download_icon.png') no-repeat;
+	background-position:8% 50%;
+}
+
+.button-style h4{
+	color: #2e593e;
+	text-transform: uppercase;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 15px;
+	margin: 0;
+	padding-top: 14px;
+	padding-left: 65px;
+}
+
+.download-links{
+	height: 49px;
+}
+
+.upper-links{
+	position: relative;
+	top: 3px;
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	margin-left: 30px;
+}
+
+.upper-links:hover{
+	text-decoration: underline;
+}
+
+#download-bottom{
+	max-width: 700px;
+	margin: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#download-bottom h5{
+	text-transform: uppercase;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 18px;
+	float: left;
+	margin-top: 13px;
+	margin-right: 30px;
+	margin-bottom: 0;
+}
+
+#download-bottom a{
+	color: #333333;
+}
+
+/* ============== */
+/* = Footer CSs = */
+/* ============== */
+footer{
+	background-color: #333333;
+	min-height: 235px;
+	color: white;
+}
+
+#footer-grid{
+	max-width: 830px;
+	margin: auto;
+	padding-top: 40px;
+}
+
+/*Icon ct*/
+#desk{
+	background: url('media/images/desk.png') no-repeat;
+	width: 310px;
+	height: 143px;
+	float: left;
+}
+
+#anime-ct{
+	background: url('media/images/littleanimation.png') no-repeat;
+	width: 57px;
+	height: 50px;
+	position: relative;
+	top: 69px;
+	left: 91px;
+}
+
+/*Animation control*/
+footer:hover #anime-ct{
+	-webkit-animation: logoAnimation 4s steps(94) 1;
+  -moz-animation:    logoAnimation 4s steps(94) 1;
+	-ms-animation:     logoAnimation 4s steps(94) 1;
+  -o-animation:      logoAnimation 4s steps(94) 1;
+  animation:         logoAnimation 4s steps(94) 1;
+}
+
+#company-name{
+	display: inline-block;
+	float: left;
+	padding-left: 20px;
+	padding-top: 70px;
+}
+
+h6{
+	text-transform: uppercase;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 15px;
+	margin: 0;
+}
+
+h5{
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 25px;
+	margin: 0;
+}
+
+h5 > span{
+	text-decoration: underline;
+	vertical-align: 0.1em;	
+}
+
+#footer-links{
+	display: inline-block;
+	padding-left: 120px;
+	padding-top: 73px;
+}
+
+#social-medias{
+	height: 21px;
+	width: 122px;
+	margin-bottom: 5px;
+}
+
+#social-medias a{
+	float: left;
+	text-indent: -9000px;
+	width: 21px;
+	height: 21px;
+	margin-left: 7px;
+}
+
+#angellist{
+	background: url('media/images/angellist.png') no-repeat;
+}
+
+#facebook{
+	background: url('media/images/facebook.png') no-repeat;
+}
+
+#twitter{
+	background: url('media/images/twitter.png') no-repeat;
+}
+
+#gplus{
+	background: url('media/images/gplus.png') no-repeat;
+}
+
+#footer-links a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'SourceSansPro-Semibold';
+	font-size: 15px;
+}
+
+#footer-links a:hover{
+	text-decoration: underline;
+}
+
+/* =============================================== */
+/* = CSS adjustment for mobile and small windows = */
+/* =============================================== */
+
+@media only screen and (max-width : 899px), and (max-device-width : 900px) {
+
+
+/* ============= */
+/* = Main page = */
+/* ============= */
+h1{
+	width: 385px;
+	font-size: 30px;
+}
+
+h1 span{
+	font-size: 40px;
+}
+
+.download{
+	max-width: 240px;
+}
+
+.download-button{
+	float: none;
+	margin: auto;
+}
+
+.download-links{
+	margin-top: 20px;
+}
+
+.download-links a{
+	max-width: 240px;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+#video{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+iframe{
+	width: 100%;
+	display: block;
+	max-width: 500px;
+	margin: auto;
+	float: none;
+}
+
+#video-text h2{
+	text-align: center;
+}
+
+#insights, #story, #investors, #press{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#team-founders{
+	max-width: 388px;
+	min-height: 452px;
+	margin: auto;
+}
+
+#sup{
+	width: 226px;
+	margin: auto;
+	display: block;
+}
+
+#corfo{
+	width: 123px;
+	margin: auto;
+	display: block;
+}
+
+#naranya{
+	width: 173px;
+	margin: auto;
+	display: block;
+}
+
+#investors img{
+	margin: 0;
+}
+
+#investor{
+	padding-bottom: 27px;
+}
+
+#cnet{
+	width: 50px;
+	margin: auto;
+	display: block;
+}
+
+#lh{
+	width: 158px;
+	margin: auto;
+	display: block;
+}
+
+#press img{
+	margin: 0;
+}
+
+#press{
+	padding-bottom: 33px;
+}
+
+/*Download button bottom part*/
+#download-bottom h5{
+	float: none;
+	text-align: center;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 20px;
+}
+
+/* ============== */
+/* = CSS Footer = */
+/* ============== */
+/*Animated Desk*/
+#desk{
+	float: none;
+	margin: auto;
+}
+
+#anime-ct{
+	-webkit-animation: logoAnimation 4s steps(94) infinite;
+  -moz-animation:    logoAnimation 4s steps(94) infinite;
+	-ms-animation:     logoAnimation 4s steps(94) infinite;
+  -o-animation:      logoAnimation 4s steps(94) infinite;
+  animation:         logoAnimation 4s steps(94) infinite;
+}
+
+footer:hover #anime-ct{
+	-webkit-animation: logoAnimation 4s steps(94) infinite;
+	-moz-animation:    logoAnimation 4s steps(94) infinite;
+	-ms-animation:     logoAnimation 4s steps(94) infinite;
+	-o-animation:      logoAnimation 4s steps(94) infinite;
+	animation:         logoAnimation 4s steps(94) infinite;
+}
+
+#company-name{
+	float: none;
+	margin: auto;
+	max-width: 196px;
+	display: inline;
+	text-align: center;
+}
+
+#footer-links{
+	padding-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 0;
+	text-align: center;
+	float: none;
+	width: 100%;
+}
+
+#social-medias{
+	margin-left: auto;
+	margin-right: auto;
+}
+}
