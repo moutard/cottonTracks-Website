@@ -1,27 +1,3 @@
-/* ================================ */
-/* = Fonts imported for this page = */
-/* ================================ */
-@font-face {
-    font-family: 'SourceSansPro-Regular';
-    src: url('media/font/SourceSansPro-Regular.otf') format('OpenType');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SourceSansPro-Semibold';
-    src: url('media/font/SourceSansPro-Semibold.otf') format('OpenType');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SourceSansPro-Light';
-    src: url('media/font/SourceSansPro-Light.otf') format('OpenType');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /*Animation of the Footer logo*/
 @-webkit-keyframes logoAnimation {
 	from { background-position: 0 0; }
@@ -36,13 +12,28 @@
 	to { 	 background-position: -5358px 0; }
 }
 
+/*Animation Top bg*/
+@-webkit-keyframes animatedIcons {
+	from { background-position: 0 0; }
+	to { background-position: -336px 0; }
+}
+@-moz-keyframes animatedIcons {
+	from { background-position: 0 0; }
+	to { background-position: -336px 0; }
+}
+-keyframes animatedIcons {
+	from { background-position: 0 0; }
+	to { background-position: -336px 0; }
+}
+
 /* ============================================== */
 /* = CSS for the main doc screen width >= 900px = */
 /* ============================================== */
 body{
 	background: url('media/images/main_background.png') repeat-x fixed;
 	color:#333333;
-	font-family: 'SourceSansPro-Regular', Helvetica, Arial, sans-serif;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: 		antialiased;
 	-ms-font-smoothing: 		antialiased;
@@ -87,7 +78,7 @@ header h1{
 
 /*Menu*/
 nav{
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	text-transform: uppercase;
 	float: right;
 	margin-top: 7px;
@@ -106,16 +97,33 @@ nav a:hover span{
 	border-bottom: 1px solid #89d1a7;
 }
 
+#icons-bg{
+	background: url('media/images/faq_bg.png') repeat-x center;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 190px;
+	-webkit-animation: animatedIcons 10s linear infinite;
+	-moz-animation:    animatedIcons 10s linear infinite;
+	-ms-animation:     animatedIcons 10s linear infinite;
+	-o-animation:      animatedIcons 10s linear infinite;
+	animation:         animatedIcons 10s linear infinite;
+}
+
 h2{
 	width: 90%;
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 33px;
 	color: white;
 	margin-top: 40px;
 	margin-bottom: 50px;
+}
+
+h3{
+	font-weight: 600;
 }
 
 #green-line{
@@ -192,13 +200,13 @@ footer:hover #anime-ct{
 
 h6{
 	text-transform: uppercase;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 15px;
 	margin: 0;
 }
 
 h5{
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 25px;
 	margin: 0;
 }
@@ -248,7 +256,7 @@ h5 > span{
 	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 15px;
 }
 

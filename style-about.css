@@ -1,27 +1,3 @@
-/* ================================ */
-/* = Fonts imported for this page = */
-/* ================================ */
-@font-face {
-    font-family: 'SourceSansPro-Regular';
-    src: url('media/font/SourceSansPro-Regular.otf') format('OpenType');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SourceSansPro-Semibold';
-    src: url('media/font/SourceSansPro-Semibold.otf') format('OpenType');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SourceSansPro-Light';
-    src: url('media/font/SourceSansPro-Light.otf') format('OpenType');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /*Animation of the Footer logo*/
 @-webkit-keyframes logoAnimation {
 	from { background-position: 0 0; }
@@ -42,7 +18,8 @@
 body{
 	background: url('media/images/main_background.png') repeat-x fixed;
 	color:#333333;
-	font-family: 'SourceSansPro-Regular', Helvetica, Arial, sans-serif;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: 		antialiased;
 	-ms-font-smoothing: 		antialiased;
@@ -87,7 +64,7 @@ header h1{
 
 /*Menu*/
 nav{
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	text-transform: uppercase;
 	float: right;
 	margin-top: 7px;
@@ -125,7 +102,7 @@ iframe{
 }
 
 h2{
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 33px;
 }
 
@@ -304,7 +281,7 @@ p span, h4 span{
 .button-style h4{
 	color: #2e593e;
 	text-transform: uppercase;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 15px;
 	margin: 0;
 	padding-top: 14px;
@@ -337,7 +314,7 @@ p span, h4 span{
 
 #download-bottom h5{
 	text-transform: uppercase;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 18px;
 	float: left;
 	margin-top: 13px;
@@ -399,13 +376,13 @@ footer:hover #anime-ct{
 
 h6{
 	text-transform: uppercase;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 15px;
 	margin: 0;
 }
 
 h5{
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 25px;
 	margin: 0;
 }
@@ -455,7 +432,7 @@ h5 > span{
 	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: 'SourceSansPro-Semibold';
+	font-weight: 600;
 	font-size: 15px;
 }
 
