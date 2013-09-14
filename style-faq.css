@@ -93,6 +93,35 @@ nav a:hover span{
 	border-bottom: 1px solid #89d1a7;
 }
 
+nav #english, nav #japanese, nav #spanish, nav #russian, nav #french{
+	background: url('media/images/flags.png') no-repeat;
+	width: 15px;
+	height: 18px;
+	overflow: hidden;
+	text-indent: -9000px;
+	display: inline-block;
+}
+
+nav #english{
+	background-position: 0 3px;
+}
+
+nav #japanese{
+	background-position: -17px 3px;
+}
+
+nav #spanish{
+	background-position: -34px 3px;
+}
+
+nav #russian{
+	background-position: -51px 3px;
+}
+
+nav #french{
+	background-position: -68px 3px;
+}
+
 .selected{
 	border-bottom: 1px solid #89d1a7;
 }
@@ -108,6 +137,7 @@ nav a:hover span{
 	-ms-animation:     animatedIcons 10s linear infinite;
 	-o-animation:      animatedIcons 10s linear infinite;
 	animation:         animatedIcons 10s linear infinite;
+	z-index: -1;
 }
 
 h2{
@@ -124,6 +154,11 @@ h2{
 
 h3{
 	font-weight: 600;
+}
+
+h3 span, p span{
+	text-decoration: underline;
+	vertical-align: 0.1em;
 }
 
 #green-line{
@@ -148,6 +183,10 @@ h3{
 #light-gray div{
 	max-width: 900px;
 	margin: auto;
+}
+
+p a{
+	color: #333333;
 }
 
 /* ============== */
@@ -269,6 +308,10 @@ h5 > span{
 #light-gray div{
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+#icons-bg{
+	display: none;
 }
 
 /* ============== */

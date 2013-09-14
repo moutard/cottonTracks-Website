@@ -138,6 +138,35 @@ nav a:hover span{
 	border-bottom: 1px solid #89d1a7;
 }
 
+nav #english, nav #japanese, nav #spanish, nav #russian, nav #french{
+	background: url('media/images/flags.png') no-repeat;
+	width: 15px;
+	height: 18px;
+	overflow: hidden;
+	text-indent: -9000px;
+	display: inline-block;
+}
+
+nav #english{
+	background-position: 0 3px;
+}
+
+nav #japanese{
+	background-position: -17px 3px;
+}
+
+nav #spanish{
+	background-position: -34px 3px;
+}
+
+nav #russian{
+	background-position: -51px 3px;
+}
+
+nav #french{
+	background-position: -68px 3px;
+}
+
 /* =============== */
 /* = Main screen = */
 /* =============== */
@@ -175,7 +204,7 @@ h1 span{
 	margin-top: 30px;
 }
 
-.download-button{
+.download-button, .download-button-opera, .download-button-default{
 	width: 240px;
 	height: 49px;
 	background-color: #5bab7d;
@@ -187,9 +216,16 @@ h1 span{
 	-moz-box-shadow: 		0 2px 1px rgba(0,0,0,0.15);
 	-webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.15);
 	float: left;
+	text-decoration: none;
+	display: block;
+}
+
+.download-button-opera, .download-button-default{
+	display: none;
 }
 
 .button-style{
+	color: #2e593e;
 	width: 100%;
 	height: 100%;
 	border-radius: 			10px;
@@ -201,14 +237,37 @@ h1 span{
 	background-position:8% 50%;
 }
 
-.button-style h4{
-	color: #2e593e;
+.installed-button{
+	display: none;
+	width: 236px;
+	height: 45px;
+	border-radius: 			10px;
+	-moz-border-radius: 10px;
+	border: solid 2px #b3b3b3;
+	border-offset: 2px;
+	float: left;
+	text-decoration: none;
+}
+
+.installed-style{
+	color: #b3b3b3;
+	width: 100%;
+	height: 100%;
+	background: url('media/images/check.png') no-repeat;
+	background-position:8% 50%;
+}
+
+.button-style h4, .installed-style h4{
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 15px;
 	margin: 0;
 	padding-top: 14px;
 	padding-left: 65px;
+}
+
+.installed-style h4{
+	padding-top: 12px;
 }
 
 .download-links{
@@ -806,7 +865,7 @@ h1 span{
 	max-width: 240px;
 }
 
-.download-button{
+.download-button, .download-button-opera, .download-button-default{
 	float: none;
 	margin: auto;
 }

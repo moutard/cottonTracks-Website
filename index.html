@@ -14,8 +14,15 @@
 	  
  	<script src="javascript/resize.js"></script>
 	
+	<script type="text/javascript" src="javascript/ga.js"></script>
+	
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/flmfagndkngjknjjcoejaihmibcfcjdh">
+	<script type="text/javascript" src="javascript/installation.js"></script>
+	
+	<script type="text/javascript" src="javascript/browserDetection.js"></script>
+	
 </head>
-<body>
+<body onload="BrowserAdapation();IsInstalled();">
 	<!-- Header -->
 	<header>
 		<h1 class="offleft"><a href="http://cottontracks.com">cottonTracks</a></h1>
@@ -23,6 +30,7 @@
 			<a href="about.html">Meet the <span>Team</span></a>
 			<a href="http://blog.cottontracks.com">Read our <span>Blog</span></a>
 			<a href="faq.html"><span>FAQ</span></a>
+			<a href="#" id="english">English</a>
 		</nav>
 	</header>
 	
@@ -31,14 +39,29 @@
 		<h1>The Journal of your <br/>
 			<span>Online Discoveries</span></h1>
 		<div class="download">
-			<div class="download-button">
+			<a href="#" class="download-button" onClick="_gaq.push([\'_trackEvent\', \'Button_Download\', \'Click\', \'Top\', \'Landing_Page\']); ExtInstall();">
 				<div class="button-style">
 					<h4>Install on Chrome</h4>
 				</div>
+			</a>
+			<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="download-button-opera" onClick="_gaq.push([\'_trackEvent\', \'Button_Download\', \'Click\', \'Top\', \'Landing_Page\']); ExtInstall();">
+				<div class="button-style">
+					<h4>Install on Opera</h4>
+				</div>
+			</a>
+			<a href="https://chrome.google.com/webstore/detail/cottontracks/flmfagndkngjknjjcoejaihmibcfcjdh?hl=en" class="download-button-default" onClick="_gaq.push([\'_trackEvent\', \'Button_Download\', \'Click\', \'Top\', \'Landing_Page\']);">
+				<div class="button-style">
+					<h4>View in the CWS</h4>
+				</div>
+			</a>
+			<div class="installed-button">
+				<div class="installed-style">
+					<h4>Installed! Thx :)</h4>
+				</div>
 			</div>
 			<div class="download-links">
-				<a href="https://chrome.google.com/webstore/detail/cottontracks/flmfagndkngjknjjcoejaihmibcfcjdh?hl=en" class="upper-links">View on the Chrome Web Store</a>
-				<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="upper-links">Get the Opera version</a>
+				<a href="https://chrome.google.com/webstore/detail/cottontracks/flmfagndkngjknjjcoejaihmibcfcjdh?hl=en" class="upper-links chrome-link">View on the Chrome Web Store</a>
+				<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="upper-links opera-link">Get the Opera version</a>
 			</div>
 		</div>
 		<div id="upper-browser"></div>
@@ -155,14 +178,29 @@
 		<div class="gray-line"></div> <!-- delimitation -->
 		<div id="download-bottom">
 			<h5>Give it a try! It's free!</h5>
-			<div class="download-button">
+			<a href="#" class="download-button" onClick="_gaq.push([\'_trackEvent\', \'Button_Download\', \'Click\', \'Bottom\', \'Landing_Page\']); ExtInstall();">
 				<div class="button-style">
 					<h4>Install on Chrome</h4>
 				</div>
+			</a>
+			<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="download-button-opera" onClick="_gaq.push([\'_trackEvent\', \'Button_Download\', \'Click\', \'Top\', \'Landing_Page\']); ExtInstall();">
+				<div class="button-style">
+					<h4>Install on Opera</h4>
+				</div>
+			</a>
+			<a href="https://chrome.google.com/webstore/detail/cottontracks/flmfagndkngjknjjcoejaihmibcfcjdh?hl=en" class="download-button-default" onClick="_gaq.push([\'_trackEvent\', \'Button_Download\', \'Click\', \'Top\', \'Landing_Page\']);">
+				<div class="button-style">
+					<h4>View in the CWS</h4>
+				</div>
+			</a>
+			<div class="installed-button">
+				<div class="installed-style">
+					<h4>Installed! Thx :)</h4>
+				</div>
 			</div>
 			<div class="download-links">
-				<a href="https://chrome.google.com/webstore/detail/cottontracks/flmfagndkngjknjjcoejaihmibcfcjdh?hl=en" class="upper-links">View on the Chrome Web Store</a>
-				<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="upper-links">Get the Opera version</a>
+				<a href="https://chrome.google.com/webstore/detail/cottontracks/flmfagndkngjknjjcoejaihmibcfcjdh?hl=en" class="upper-links chrome-link">View on the Chrome Web Store</a>
+				<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="upper-links opera-link">Get the Opera version</a>
 			</div>
 		</div>
 	</div>
