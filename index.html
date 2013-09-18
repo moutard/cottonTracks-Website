@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="en">
 <head>
-	
+
 	<title>c&#818;o&#818;t&#818;t&#818;o&#818;n&#818;Tracks</title>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.cottontracks.com/media/images/ct-favicon16.png">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
-	
+
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
   <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'></script>
-	  
+
  	<script src="javascript/resize.js"></script>
-	
+ 	<script src="javascript/roundrobin.js"></script>
+
 	<script type="text/javascript" src="javascript/ga.js"></script>
-	
+
 	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/flmfagndkngjknjjcoejaihmibcfcjdh">
 	<script type="text/javascript" src="javascript/installation.js"></script>
-	
+
 	<script type="text/javascript" src="javascript/browserDetection.js"></script>
-	
+
 </head>
 <body onload="BrowserAdapation();IsInstalled();">
 	<!-- Header -->
@@ -33,7 +34,7 @@
 			<a href="#" id="english">English</a>
 		</nav>
 	</header>
-	
+
 	<!-- Main Screen - Browser and download button -->
 	<div id="top">
 		<h1>The Journal of your <br/>
@@ -64,12 +65,14 @@
 				<a href="https://addons.opera.com/en/extensions/details/cottontracks/" class="upper-links opera-link">Get the Opera version</a>
 			</div>
 		</div>
-		<div id="upper-browser"></div>
+		<div id="upper-browser">
+		  <img id="upper-screenshot" src="media/images/screenshot_manager.png"/>
+		</div>
 	</div>
-	
+
 	<!-- Features -->
 	<div id="main-page">
-		
+
 		<!-- Browser History description -->
 		<div id="green-line"></div> <!-- delimitation -->
 		<div id="gray-background">
@@ -88,12 +91,12 @@
 			</div>
 		</div>
 		<div id="gray-triangle"></div> <!-- delimitation -->
-		
+
 		<!-- Collections descriptions -->
 		<div class="white-background">
 			<div id="intelligente-record">
 				<div id="sticker-icon"></div>
-				<div class="inline-block">	
+				<div class="inline-block">
 					<h2>An intelligent record of your interests</h2>
 					<p>Our algorithms create collections of interesting articles, videos, images and maps based on how deeply you investigate a particular subject. Search and browse a few pages around the same idea and the app will remember and organize the information automatically.</p>
 				</div>
@@ -122,7 +125,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Stop Bookmarking -->
 		<div class="gray-line"></div> <!-- delimitation -->
 		<div id="stop-bookmarking">
@@ -132,15 +135,15 @@
 			</div>
 			<!-- Feature slider -->
 			<div id="bookmark-slider">
-				<div id="slider1">
+				<div class="slider slider1">
 					<div id="ct-button"></div>
 					<p>Want to go back to some information previously seen about the topic of a video you are currently playing? Click the <span>c</span> button and access the most relevant stories you have encountered in the past weeks, months or years around this very subject.</p>
 				</div>
-				<div id="slider2">
+				<div class="slider slider2 hidden">
 					<div id="ct-text"></div>
 					<p>Want to remember a specific joke or an impressive number in an article? Highlight it and we will remember it as a quote.</p>
 				</div>
-				<div id="slider3">
+				<div class="slider slider3 hidden">
 					<div id="ct-tags"></div>
 					<p>Want to grab simultaneously all resources about two different subjects in the same story?  Modify our semantic filters to get the perfect memory of the things you care about.</p>
 				</div>
@@ -148,10 +151,12 @@
 			<!-- Screenshots -->
 			<div id="mac-screen">
 				<div id="mac-browser">
+          <img class="slider slider1" id="screenshot1" src="media/images/screenshot_manager.png"/>
+          <img class="slider slider2 hidden" id="screenshot2" src="media/images/screenshot_story.png"/>
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Privacy description -->
 		<div class="gray-line"></div> <!-- delimitation -->
 		<div class="white-background">
@@ -173,7 +178,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Download button -->
 		<div class="gray-line"></div> <!-- delimitation -->
 		<div id="download-bottom">
@@ -204,7 +209,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Footer -->
 	<footer>
 		<div id="footer-grid">

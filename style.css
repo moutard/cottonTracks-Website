@@ -2,15 +2,15 @@
 /* = Animation frames = */
 /* ==================== */
 /*Conter Clockwise animation from the history icon and the privacy icon*/
-@-webkit-keyframes conterClockwise { 
-	from { 
+@-webkit-keyframes conterClockwise {
+	from {
 		-webkit-transform: rotate(0deg);
 		-moz-transform:    rotate(0deg);
 		-ms-transform:     rotate(0deg);
 		-o-transform: 		 rotate(0deg);
 		transform: 				 rotate(0deg);
 	}
-	to { 	
+	to {
 		-webkit-transform: rotate(-360deg);
 		-moz-transform: 	 rotate(-360deg);
 		-ms-transform: 	   rotate(-360deg);
@@ -19,14 +19,14 @@
  	}
 }
 @-moz-keyframes conterClockwise {
-	from { 
+	from {
 		-webkit-transform: rotate(0deg);
 		-moz-transform: 	 rotate(0deg);
 		-ms-transform: 		 rotate(0deg);
 		-o-transform: 		 rotate(0deg);
 		transform: 				 rotate(0deg);
 	}
-	to { 	
+	to {
 		-webkit-transform: rotate(-360deg);
 		-moz-transform:  	 rotate(-360deg);
 		-ms-transform: 		 rotate(-360deg);
@@ -35,14 +35,14 @@
  	}
 }
 -keyframes conterClockwise {
-	from { 
+	from {
 		-webkit-transform: rotate(0deg);
 		-moz-transform:    rotate(0deg);
 		-ms-transform: 		 rotate(0deg);
 		-o-transform: 		 rotate(0deg);
 		transform: 				 rotate(0deg);
 	}
-	to { 	
+	to {
 		-webkit-transform: rotate(-360deg);
 		-moz-transform: 	 rotate(-360deg);
 		-ms-transform: 		 rotate(-360deg);
@@ -298,6 +298,10 @@ h1 span{
 	background-size: 100%;
 }
 
+#upper-screenshot{
+  margin-top: 73px;
+}
+
 /* ================ */
 /* = Features CSS = */
 /* ================ */
@@ -340,7 +344,7 @@ h1 span{
 #big-hand{
 	width: 52px;
 	height: 52px;
-	background: url('media/images/big-hand.png') no-repeat;	
+	background: url('media/images/big-hand.png') no-repeat;
 	position: relative;
 	top: 48px;
 	left: 63px;
@@ -354,7 +358,7 @@ h1 span{
 #little-hand{
 	width: 52px;
 	height: 52px;
-	background: url('media/images/little-hand.png') no-repeat;	
+	background: url('media/images/little-hand.png') no-repeat;
 	position: relative;
 	top: -4px;
 	left: 63px;
@@ -596,15 +600,39 @@ h2{
 	margin-right: 37px;
 }
 
-#slider1 p{
+.slider{
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity: 1s;
+}
+
+.hidden{
+  opacity: 0;
+}
+
+.slider1{
+  position: absolute;
+  top: 0;
+}
+.slider2{
+  position: absolute;
+  top: 0;
+}
+.slider3{
+  position: absolute;
+  top: 0;
+}
+
+.slider1 p{
 	padding-top: 6px;
 }
 
-#slider2 p{
+.slider2 p{
 	padding-top: 17px;
 }
 
-#slider3 p{
+.slider3 p{
 	padding-top: 6px;
 }
 
@@ -623,6 +651,18 @@ h2{
 	background: url('media/images/chrome_flat.png') no-repeat;
 	background-size: 100%;
 	margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#screenshot1{
+  position: relative;
+  top: 73px;
+}
+
+#screenshot2{
+  position: relative;
+  top: -422px;
 }
 
 /*Privacy description*/
@@ -791,7 +831,7 @@ h5{
 
 h5 > span{
 	text-decoration: underline;
-	vertical-align: 0.1em;	
+	vertical-align: 0.1em;
 }
 
 #footer-links{
@@ -1076,7 +1116,7 @@ footer:hover #anime-ct{
 /* ============================== */
 /*@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 body{
-	width: 400px;		
+	width: 400px;
 }
 
 header{
