@@ -258,7 +258,7 @@ h3{
 }
 
 #investors div{
-	max-width: 648px;
+	max-width: 870px;
 	margin: auto;
 }
 
@@ -612,6 +612,12 @@ iframe{
 
 #naranya{
 	width: 173px;
+	margin: auto;
+	display: block;
+}
+
+#nxtp{
+	width: 178px;
 	margin: auto;
 	display: block;
 }
