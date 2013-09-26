@@ -167,6 +167,37 @@ nav #french{
 	background-position: -68px 3px;
 }
 
+nav ul{
+	list-style: none;
+	display: inline-table;
+	margin: 0;
+}
+
+nav ul li{
+	display: inline-block;
+}
+
+nav ul ul{
+	display: none;
+	position: fixed;
+	right: 20px;
+	opacity: 0;
+	-webkit-animation: opacity 10s;
+	-moz-animation:    opacity 10s;
+	-ms-animation:     opacity 10s;
+	-o-animation:      opacity 10s;
+	animation:         opacity 10s;
+}
+
+nav ul li:hover >ul{
+	display: inline-block;
+	opacity: 1;
+}
+
+nav ul ul li{
+	display: block;
+}
+
 /* =============== */
 /* = Main screen = */
 /* =============== */
@@ -680,7 +711,7 @@ h2{
 	height: 210px;
 	position: relative;
 	top: -50px;
-	left: -42px;
+	left: -41px;
   -webkit-animation: conterClockwise 20s linear infinite;
   -moz-animation:    conterClockwise 20s linear infinite;
   -ms-animation:     conterClockwise 20s linear infinite;

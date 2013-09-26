@@ -108,6 +108,37 @@ nav #french{
 	background-position: -68px 3px;
 }
 
+nav ul{
+	list-style: none;
+	display: inline-table;
+	margin: 0;
+}
+
+nav ul li{
+	display: inline-block;
+}
+
+nav ul ul{
+	display: none;
+	position: fixed;
+	right: 20px;
+	opacity: 0;
+	-webkit-animation: opacity 10s;
+	-moz-animation:    opacity 10s;
+	-ms-animation:     opacity 10s;
+	-o-animation:      opacity 10s;
+	animation:         opacity 10s;
+}
+
+nav ul li:hover >ul{
+	display: inline-block;
+	opacity: 1;
+}
+
+nav ul ul li{
+	display: block;
+}
+
 .selected{
 	border-bottom: 1px solid #89d1a7;
 }
