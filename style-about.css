@@ -286,7 +286,31 @@ h3{
 	margin: auto;
 }
 
-#investors h4, #press h4{
+#technical{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 130px;
+	max-width: 900px;
+	margin: auto;
+}
+
+#technical img{
+	margin-right: 20px;
+	margin-left: 20px;
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: all 1s ease;
+}
+
+#technical img:hover{
+	-webkit-filter: grayscale(0%);
+}
+
+#technical div{
+	max-width: 167px;
+	margin: auto;
+}
+
+#investors h4, #press h4, #technical h4{
 	color: #999999;
 	text-align: center;
 }
@@ -647,6 +671,14 @@ iframe{
 }
 
 #press{
+	padding-bottom: 33px;
+}
+
+#technical img{
+	margin: 0;
+}
+
+#technical{
 	padding-bottom: 33px;
 }
 
