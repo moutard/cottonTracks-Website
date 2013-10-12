@@ -3,6 +3,7 @@ function ExtInstall() {
   	alert("already installed!");
   else 
   	chrome.webstore.install();
+		IsInstalled();
 }
 function IsInstalled(){
 	if (chrome.app.isInstalled){
