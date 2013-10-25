@@ -334,7 +334,7 @@ h5 > span{
 	text-decoration: underline;
 }
 
-@media only screen and (max-width : 899px), and (max-device-width : 900px) {
+@media only screen and (max-width : 899px) {
 
 #light-gray div{
 	padding-left: 5%;

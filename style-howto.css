@@ -251,7 +251,7 @@ h5 > span{
 /* = CSS adjustment for mobile and small windows = */
 /* =============================================== */
 
-@media only screen and (max-width : 899px), and (max-device-width : 900px) {
+@media only screen and (max-width : 899px) {
   /* ============= */
   /* = Main page = */
   /* ============= */
