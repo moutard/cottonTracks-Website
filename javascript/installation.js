@@ -26,14 +26,14 @@ function IsInstalled(){
 	if (appInstalled){
 		var css = document.createElement("style");
 		css.type = "text/css";
-		css.innerHTML = ".download-button { display: none; } .installed-button{ display: inline;}";
+		css.innerHTML = ".download-button { display: none; } .download-button-opera { display: none; } .installed-button{ display: inline;}";
 		document.body.appendChild(css);
 	}
 	else
 		window.addEventListener('install', function(){ 
 			var css = document.createElement("style");
 			css.type = "text/css";
-			css.innerHTML = ".download-button { display: none; } .installed-button{ display: inline;}";
+			css.innerHTML = ".download-button { display: none; } .download-button-opera { display: none; } .installed-button{ display: inline;}";
 			document.body.appendChild(css);
 		});
 }
