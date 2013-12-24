@@ -85,6 +85,11 @@ header h1{
   margin: 0;
 }
 
+#thanks_text p span{
+	text-decoration: underline;
+	vertical-align: 0.1em;
+}
+
 h2{
 	font-weight: 600;
 	font-size: 33px;
